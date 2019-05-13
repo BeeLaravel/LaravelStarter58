@@ -1,0 +1,54 @@
+web
+    nginx
+    httpd
+    tomcat
+    lighttpd
+    php
+    node
+    python
+    go
+file
+    ftp
+    sftp
+    samba
+netfile
+    OwnCloud
+    NextCloud
+    百度网盘
+    360网盘
+    小米网盘
+    华为网盘
+    Yandex
+    S3
+    OneDrive
+    Gdrive
+    MediaFire
+    DropBox
+    BoxSugarSync
+oss
+    aliyun
+    qcloud
+database
+    mysql
+    postgers
+    sqlsrv
+    mssql
+    oci
+    db2
+cache
+    memcache
+    redis
+    mongo
+queue
+    rabbitmq
+    zeromq
+    activemq
+    kafka
+searchengine
+    elastsearch
+    sphinx
+versioncontrol
+    git
+    svn
+    docker
+    vagrant

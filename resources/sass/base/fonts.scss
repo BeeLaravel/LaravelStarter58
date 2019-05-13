@@ -1,0 +1,31 @@
+// fonts
+// en
+// zh_CN
+// founder 方正
+@font-face { // 方正硬笔行书简体
+    font-family: founder_hard_xing;
+    src: url('/fonts/zh_CN/founder_hard_xing.ttf');
+}
+@font-face { // 方正硬笔楷书简体
+    font-family: founder_hard_kai;
+    src: url('/fonts/zh_CN/founder_hard_kai.ttf');
+}
+@font-face { // 方正瘦金书简体
+    font-family: founder_thin_jin;
+    src: url('/fonts/zh_CN/founder_thin_jin.ttf');
+}
+@font-face { // 方正静蕾简体
+    font-family: founder_jinglei;
+    src: url('/fonts/zh_CN/founder_jinglei.ttf');
+}
+// apple 苹方
+@font-face { // 苹方黑体
+    font-family: apple_hei;
+    src: url('/fonts/zh_CN/apple_hei.ttf');
+}
+// zh_TW
+// apple 苹方
+@font-face { // 苹方黑体
+    font-family: apple_hei_tw;
+    src: url('/fonts/zh_TW/apple_hei.ttf');
+}

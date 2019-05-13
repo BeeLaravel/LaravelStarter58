@@ -1,0 +1,51 @@
+// utilities
+.container { // a container with a width 1200px and centered
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.left { // float left
+    float: left;
+}
+.right { // float right
+    float: right;
+}
+
+i.add {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 10px;
+    @include absolute_vcenter();
+    left: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: green;
+    color: white;
+    transform: rotate(45deg);
+
+    &:before {
+        content: "×";
+    }
+}
+i.close {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 10px;
+    @include absolute_vcenter();
+    right: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: red;
+    color: white;
+
+    &:before {
+        content: "×";
+    }
+}
+
