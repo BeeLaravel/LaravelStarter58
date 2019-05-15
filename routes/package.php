@@ -20,7 +20,12 @@ Route::group([], function ($router) {
 	], function ($router) {
 		Route::get('/', 'Parser\IndexController@index')->name('parser.index');
 
-		Route::get('/fontlib', 'Parser\FontLibController@index')->name('parser.index'); // PhenX/php-font-lib
-		Route::get('/pdfparser', 'Parser\PdfparserController@index')->name('parser.index'); // smalot/pdfparser
+		Route::get('/fontlib', 'Parser\FontLibController@index')->name('parser.fontlib'); // PhenX/php-font-lib
+		Route::get('/pdfparser', 'Parser\PdfparserController@index')->name('parser.pdfparser'); // smalot/pdfparser
+		Route::get('/markdown', 'Parser\MarkdownController@index')->name('parser.markdown'); // graham-campbell/markdown
+		Route::get('/markdown2', 'Parser\MarkdownController@index2')->name('parser.markdown2');
+		Route::get('/markdown3', 'Parser\MarkdownController@index3')->name('parser.markdown3');
+		Route::get('/markdown4', 'Parser\MarkdownController@index4')->name('parser.markdown4');
+		Route::get('/hashids', 'Parser\HashidsController@index')->name('parser.hashids');
 	});
 });
