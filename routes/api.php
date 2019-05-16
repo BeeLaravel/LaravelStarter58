@@ -9,7 +9,10 @@
 $api = app('Dingo\Api\Routing\Router');
 
 // $api->group(['middleware' => ['auth:api']], function ($api) {
-    $api->version('v1', function ($api) { // v1
+    $api->version('v1', [
+    	// 'namespace' => 'App\Http\Controllers\Api',
+    	'middleware' => ['cors'], // 'serializer:array', 'bindings', 'change-locale', 
+    ], function ($api) { // v1
 		// #### tool
         $api->resource('packages', '\App\Http\Controllers\Api\Tool\PackageController'); // packages
 		$api->resource('applications', '\App\Http\Controllers\Api\Tool\ApplicationController'); // applications
