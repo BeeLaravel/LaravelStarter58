@@ -310,13 +310,13 @@
                 pagination: {},
                 item: {},
                 control: {
-                    api_url_base: '/api/packages',
+                    api_url_base: '/api/applications',
                     category_api_url_base: '/api/structure/category_items',
                     show_create: false,
                     is_edit: false,
                     filter: "",
-                    default_language: 134, // Composer
-                    default_category: 158, // API
+                    default_language: 159, // Laravel5
+                    default_category: 133, // Shop
                 },
             }
         },
@@ -350,6 +350,8 @@
                         .then(response => {
                             if ( true ) {
                                 this.search();
+
+                                this.control.show_create = false;
                             } else {
 
                             }
@@ -394,7 +396,7 @@
                 axios.get(this.control.category_api_url_base, {
                     params: {
                         per_page: 100,
-                        category_id: 5,
+                        category_id: 7,
                     }
                 }).then(response => {
                     this.languages = response.data.data;
@@ -404,7 +406,7 @@
                 axios.get(this.control.category_api_url_base, {
                     params: {
                         per_page: 100,
-                        category_id: 6,
+                        category_id: 8,
                     }
                 }).then(response => {
                     this.categories = response.data.data;

@@ -27,5 +27,10 @@ Route::group([], function ($router) {
 		Route::get('/markdown3', 'Parser\MarkdownController@index3')->name('parser.markdown3');
 		Route::get('/markdown4', 'Parser\MarkdownController@index4')->name('parser.markdown4');
 		Route::get('/hashids', 'Parser\HashidsController@index')->name('parser.hashids');
+        Route::get('/barcode', 'BarCodeController@index')->name('parser.barcode');;
+	});
+	Route::group([
+		'prefix' => LaravelLocalization::setLocale(), // mcamara/laravel-localization
+	], function() {
 	});
 });

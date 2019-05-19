@@ -3,6 +3,7 @@ namespace App\Http\Controllers\Api\Tool;
 
 use Illuminate\Http\Request;
 
+use App\Http\Requests\Tool\PackageRequest as ThisRequest;
 use App\Models\Tool\Package as ThisModel;
 use App\Transformers\Tool\PackageTransformer as ThisTransformer;
 
@@ -40,13 +41,13 @@ class PackageController extends Controller { // 包管理
 
         return $this->response->item($item, new ThisTransformer);
     }
-    public function store(Request $request) {
+    public function store(ThisRequest $request) {
         $item = ThisModel::create($request->all());
         return [
             'result' => $item,
         ];
     }
-    public function update(Request $request, $id) {
+    public function update(ThisRequest $request, $id) {
         $item = ThisModel::findOrFail($id);
         $result = $item->update($request->all());
         return [

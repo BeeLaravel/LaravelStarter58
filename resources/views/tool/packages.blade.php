@@ -16,6 +16,7 @@
         <header-first></header-first>
         <list-first></list-first>
         <footer-first></footer-first>
+        <tip-first :message="message"></tip-first>
     </div>
 
     <script src="/scripts/tool.js"></script>
