@@ -7,6 +7,8 @@ Route::group([
 	$router->get('/fonts', 'IndexController@fonts')->name('fonts'); // fonts
 	$router->get('/svgs', 'IndexController@svgs')->name('svgs'); // svgs
 });
+// php
+Route::get('php/info', 'PHPController@info')->name('tool.php.info');
 
 Route::get('database/references', 'Database\ReferenceController@index')->name('tool.database.references');
 

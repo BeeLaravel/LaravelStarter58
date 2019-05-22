@@ -25,42 +25,36 @@ class SoapController extends Controller {
                 ]);
         });
 
-
-        $response = $this->soapWrapper->call('Currency.GetConversionAmount', [
-            'CurrencyFrom' => 'USD', 
-            'CurrencyTo' => 'EUR', 
-            'RateDate' => '2014-06-05', 
-            'Amount' => '1000',
-        ]);
-
-        var_dump($response);
-
+        // $response = $this->soapWrapper->call('Currency.GetConversionAmount', [
+        //     'CurrencyFrom' => 'USD', 
+        //     'CurrencyTo' => 'EUR', 
+        //     'RateDate' => '2014-06-05', 
+        //     'Amount' => '1000',
+        // ]);
 
         $response = $this->soapWrapper->call('Currency.GetConversionAmount', [
             new GetConversionAmount('USD', 'EUR', '2014-06-05', '1000')
         ]);
 
         var_dump($response);
-
-        exit;
     }
 }
-$this->soapWrapper->add('Currency', function ($service) {
-    $service
-        ->wsdl()
-        ->trace(true)
-        ->header() // Optional: (parameters: $namespace,$name,$data,$mustunderstand,$actor)
-        ->customHeader() // Optional: (parameters: $customerHeader) Use this to add a custom SoapHeader or extended class                
-        ->cookie()
-        ->location()
-        ->certificate()
-        ->cache(WSDL_CACHE_NONE)
-        ->options([
-            'login' => 'username',
-            'password' => 'password'
-        ])
-        ->classmap([
-            GetConversionAmount::class,
-            GetConversionAmountResponse::class,
-        ]);
-});
+// $this->soapWrapper->add('Currency', function ($service) {
+//     $service
+//         ->wsdl()
+//         ->trace(true)
+//         ->header() // Optional: (parameters: $namespace,$name,$data,$mustunderstand,$actor)
+//         ->customHeader() // Optional: (parameters: $customerHeader) Use this to add a custom SoapHeader or extended class                
+//         ->cookie()
+//         ->location()
+//         ->certificate()
+//         ->cache(WSDL_CACHE_NONE)
+//         ->options([
+//             'login' => 'username',
+//             'password' => 'password'
+//         ])
+//         ->classmap([
+//             GetConversionAmount::class,
+//             GetConversionAmountResponse::class,
+//         ]);
+// });

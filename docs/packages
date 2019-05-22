@@ -1,9 +1,3 @@
-032. Dump 调试工具（5.7 新功能）——beyondcode/laravel-dump-server 免费 7个月前 05:01
-033. 为 eloquent 模型增加排序功能 ——spatie/eloquent-sortable 7个月前 08:23
-034. 用户活动以及模型变动日志——spatie/laravel-activitylog 7个月前 14:16
-035. 压缩 HTML 加速网页响应—— renatomarinho/laravel-page-speed 免费 7个月前 06:32
-036. 数据库的多语言翻译方案 ——spatie/laravel-translatable 7个月前 10:17
-037. 另一个数据库的多语言翻译方案 ——dimsav/laravel-translatable 7个月前 12:04
 038. 快速接入 Mongodb——jenssegers/mongodb (基础篇) 免费 6个月前 08:37
 039. 角色权限控制组件——spatie/laravel-permission 6个月前 12:44
 044. Laravel 本地化功能增强，切换项目语言——mcamara/laravel-localization 免费 6个月前 09:18
@@ -19,26 +13,13 @@
 059. Laravel 静态代码分析工具——nunomaduro/larastan 免费 5个月前 07:17
 060. 获取国家详细信息 —— rinvex/countries 4个月前 08:37
 061. Laravel 访客追踪——pragmarx/tracker 4个月前 09:00
-062. 快速切换登录用户 —— viacreative/sudo-su 免费 4个月前 03:46
-063. 定时任务 Web 控制台 ——studio/laravel-totem 4个月前 09:04
-064. API 动态查询参数—— spatie/laravel-query-builder 4个月前 12:21
 065. 快速搭建管理后台（基础安装）——encore/laravel-admin 免费 4个月前 17:28
-066. 快速搭建管理后台（权限管理）——encore/laravel-admin 4个月前 13:14
-067. 快速搭建管理后台（使用插件）—— encore/laravel-admin 4个月前 08:39
 069. 视图模型辅助类—— spatie/laravel-view-models 3个月前 10:15
 070. 自动面包屑导航 —— davejamesmiller/laravel-breadcrumbs 3个月前 10:04
 071. 项目代码统计——wnx/laravel-stats 免费 3个月前 05:31
 072. 异常实时监控及报警——sentry/sentry-laravel（Laravel 5.7） 3个月前 07:11
 075. Eloquent 模型多表模糊搜索——nicolaslopezj/searchable 免费 2个月前 11:39
 080. Laravel Scout 结合 Elasticsearch 进行全文搜索—— babenkoivan/scout-elasticsearch-driver 1个月前 13:27
-081. 全局配置信息 —— spatie/valuestore 1个月前 06:56
-082. 全局配置信息（二）——appstract/laravel-options 1个月前 02:35
-083. 日期及时间处理——nesbot/carbon 免费 1个月前 08:12
-086. 轻量级的消息提示 —— spatie/Laravel-flash 1个月前 06:00
-087. Laravel Email 编辑器 —— qoraiche/laravel-mail-editor 免费 1个月前 06:19
-088. PHP 7 stream-parser 支持多格式的文件流解析器——rodenastyle/stream-parser 1个月前 04:08
-089. 模型变动日志——owen-it/laravel-auditing 4周前 08:43
-090. 简单的用户消息系统——cmgmyr/messenger 3周前 06:36
 091. 让你的 CSRF Token 永不过期 ——genealabs/laravel-caffeine 免费 3周前 09:36
 092. 多站点架构方案（一套代码部署多个站点）——hyn/multi-tenant 2周前 12:48
 093. Laravel 语言包 —— overtrue/laravel-lang （caouecs/laravel-lang） 1周前 02:40
