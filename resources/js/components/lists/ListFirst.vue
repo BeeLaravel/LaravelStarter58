@@ -310,13 +310,13 @@
                 pagination: {},
                 item: {},
                 control: {
-                    api_url_base: '/api/packages',
+                    api_url_base: '/api/applications',
                     category_api_url_base: '/api/structure/category_items',
                     show_create: false,
                     is_edit: false,
                     filter: "",
-                    default_language: 134, // Composer
-                    default_category: 158, // API
+                    default_language: 159, // Laravel5
+                    default_category: 133, // Shop
                 },
             }
         },
@@ -327,8 +327,8 @@
                         page: page ? page : this.pagination.page,
                         per_page: this.pagination.per_page,
                         filter: this.control.filter,
-                        language: this.control.language,
-                        category: this.control.category,
+                        language: this.control.default_language,
+                        category: this.control.default_category,
                     }
                 }).then(response => {
                     this.list = response.data.data;
@@ -396,7 +396,7 @@
                 axios.get(this.control.category_api_url_base, {
                     params: {
                         per_page: 100,
-                        category_id: 5,
+                        category_id: 7,
                     }
                 }).then(response => {
                     this.languages = response.data.data;
@@ -406,7 +406,7 @@
                 axios.get(this.control.category_api_url_base, {
                     params: {
                         per_page: 100,
-                        category_id: 6,
+                        category_id: 8,
                     }
                 }).then(response => {
                     this.categories = response.data.data;
@@ -416,6 +416,7 @@
         mounted() {
             this.load_languages();
             this.load_categories();
+
             this.search();
         }
     }

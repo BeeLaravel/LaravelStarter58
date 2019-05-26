@@ -3,9 +3,12 @@ namespace App\Http\Controllers\Package\Parser;
 
 use FontLib\Font;
 
+use App\Models\Tool\Font as FontModel;
+
 class FontLibController extends Controller {
-    public function index() {
-        $font = Font::load(public_path('/fonts/zh_CN/founder_hard_xing.ttf'));
+    public function index($id=1) {
+        $font = FontModel::find($id);
+        $font = Font::load(storage_path($font->url));
         $font->parse();
 
         echo "FontName: " . $font->getFontName() .'<br>';

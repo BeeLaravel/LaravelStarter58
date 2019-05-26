@@ -14,7 +14,7 @@
 <body>
     <div id="app">
         <header-first></header-first>
-        <list-first></list-first>
+        <list-second></list-second>
         <footer-first></footer-first>
         <tip-first :message="message"></tip-first>
     </div>

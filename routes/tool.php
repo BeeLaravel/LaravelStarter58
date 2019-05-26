@@ -2,9 +2,11 @@
 Route::group([
 	// 'middleware' => ['auth:admin']
 ], function ($router) {
-	$router->get('/packages', 'IndexController@packages')->name('packages'); // packages
 	$router->get('/applications', 'IndexController@applications')->name('applications'); // applications
+	$router->get('/packages', 'IndexController@packages')->name('packages'); // packages
+	$router->get('/files', 'IndexController@files')->name('files'); // files
 	$router->get('/fonts', 'IndexController@fonts')->name('fonts'); // fonts
+	$router->get('/custom_fonts', 'IndexController@custom_fonts')->name('custom_fonts'); // custom_fonts
 	$router->get('/svgs', 'IndexController@svgs')->name('svgs'); // svgs
 });
 // php

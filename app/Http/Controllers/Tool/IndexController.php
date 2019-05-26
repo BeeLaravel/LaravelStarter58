@@ -5,6 +5,13 @@ use Illuminate\Http\Request;
 
 class IndexController extends Controller {
    // public function __construct(Request $request) {}
+	public function applications(Request $request) {
+		$action = $request->route()->getActionMethod();
+
+		return view("tool.".$action, [
+			'title' => $action
+		]);
+	}
 	public function packages(Request $request) {
 		$action = $request->route()->getActionMethod();
 
@@ -12,7 +19,28 @@ class IndexController extends Controller {
 			'title' => $action
 		]);
 	}
-	public function applications(Request $request) {
+	public function files(Request $request) {
+		$action = $request->route()->getActionMethod();
+
+		return view("tool.".$action, [
+			'title' => $action
+		]);
+	}
+	public function fonts(Request $request) {
+		$action = $request->route()->getActionMethod();
+
+		return view("tool.".$action, [
+			'title' => $action
+		]);
+	}
+	public function custom_fonts(Request $request) {
+		$action = $request->route()->getActionMethod();
+
+		return view("tool.".$action, [
+			'title' => $action
+		]);
+	}
+	public function svgs(Request $request) {
 		$action = $request->route()->getActionMethod();
 
 		return view("tool.".$action, [

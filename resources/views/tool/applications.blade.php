@@ -14,7 +14,7 @@
 <body>
     <div id="app">
         <header-first></header-first>
-        <list-second></list-second>
+        <list-first></list-first>
         <footer-first></footer-first>
     </div>
 

@@ -14,10 +14,13 @@ $api = app('Dingo\Api\Routing\Router');
     	'middleware' => ['cors'], // 'serializer:array', 'bindings', 'change-locale', 
     ], function ($api) { // v1
 		// #### tool
-        $api->resource('packages', '\App\Http\Controllers\Api\Tool\PackageController'); // packages
 		$api->resource('applications', '\App\Http\Controllers\Api\Tool\ApplicationController'); // applications
+        $api->resource('packages', '\App\Http\Controllers\Api\Tool\PackageController'); // packages
+		$api->resource('files', '\App\Http\Controllers\Api\Tool\FileController'); // files
 		$api->resource('fonts', '\App\Http\Controllers\Api\Tool\FontController'); // fonts
+		$api->resource('custom_fonts', '\App\Http\Controllers\Api\Tool\CustomFontController'); // custom_fonts
 		$api->resource('svgs', '\App\Http\Controllers\Api\Tool\SvgController'); // svgs
+		$api->get('download/{category}/{id}', '\App\Http\Controllers\Api\Tool\DownloadController@download'); // download
 		// // 投票 Vote
 	    // $api->resource('votes', '\App\Http\Controllers\Api\Vote\VoteController'); // 投票 Vote
 	    // $api->resource('vote_users', '\App\Http\Controllers\Api\Vote\UserController'); // 用户 User
