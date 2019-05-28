@@ -1,10 +1,11 @@
 <?php
-namespace App\Http\Controllers\BeeSoft;
+namespace App\Http\Controllers\Package\Rpc;
 
 use Illuminate\Http\Request;
 
 class IndexController extends Controller {
     public function index() {
-    	return 'beesoft index index';
+    	return 'package rpc index index';
     }
 }
+

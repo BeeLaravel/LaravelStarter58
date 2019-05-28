@@ -48,6 +48,7 @@
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^3.0",
         "orangehill/iseed": "^2.6",
+        "overtrue/package-builder": "^1.0",
         "phpunit/phpunit": "^7.5",
         "rap2hpoutre/laravel-log-viewer": "^1.1",
         "viacreative/sudo-su": "^1.1"

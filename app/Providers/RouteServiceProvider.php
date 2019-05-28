@@ -1,47 +1,27 @@
 <?php
-
 namespace App\Providers;
 
-use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
+use Illuminate\Support\Facades\Route;
 
-class RouteServiceProvider extends ServiceProvider
-{
-    /**
-     * This namespace is applied to your controller routes.
-     *
-     * In addition, it is set as the URL generator's root namespace.
-     *
-     * @var string
-     */
+class RouteServiceProvider extends ServiceProvider {
     protected $namespace = 'App\Http\Controllers';
 
-    /**
-     * Define your route model bindings, pattern filters, etc.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        //
-
+    public function boot() {
         parent::boot();
     }
 
-    /**
-     * Define the routes for the application.
-     *
-     * @return void
-     */
-    public function map()
-    {
+    public function map() {
         $this->mapApiRoutes();
-
         $this->mapWebRoutes();
 
         // applications
         $this->mapShopRoutes();
         $this->mapWarehouseRoutes();
+
+        // apis
+        $this->mapSoapRoutes();
+        $this->mapRestRoutes();
 
         // others
         $this->mapPackageRoutes();
@@ -50,15 +30,13 @@ class RouteServiceProvider extends ServiceProvider
         $this->mapTestRoutes();
     }
 
-    /**
-     * Define the "web" routes for the application.
-     *
-     * These routes all receive session state, CSRF protection, etc.
-     *
-     * @return void
-     */
-    protected function mapWebRoutes()
-    {
+    protected function mapApiRoutes() {
+        Route::prefix('api')
+             ->middleware('api')
+             ->namespace($this->namespace)
+             ->group(base_path('routes/api.php'));
+    }
+    protected function mapWebRoutes() {
         Route::middleware('web')
              ->namespace($this->namespace)
              ->group(base_path('routes/web.php'));
@@ -76,6 +54,20 @@ class RouteServiceProvider extends ServiceProvider
             ->middleware('web')
             ->namespace($this->namespace.'\Warehouse')
             ->group(base_path('routes/warehouse.php'));
+    }
+
+    // apis
+    protected function mapSoapRoutes() {
+        Route::prefix('soap')
+            ->middleware('web')
+            ->namespace($this->namespace.'\Soap')
+            ->group(base_path('routes/soap.php'));
+    }
+    protected function mapRestRoutes() {
+        Route::prefix('rest')
+            ->middleware('web')
+            ->namespace($this->namespace.'\Rest')
+            ->group(base_path('routes/rest.php'));
     }
 
     // others
@@ -102,20 +94,5 @@ class RouteServiceProvider extends ServiceProvider
             ->middleware('web')
             ->namespace($this->namespace.'\Tool')
             ->group(base_path('routes/tool.php'));
-    }
-
-    /**
-     * Define the "api" routes for the application.
-     *
-     * These routes are typically stateless.
-     *
-     * @return void
-     */
-    protected function mapApiRoutes()
-    {
-        Route::prefix('api')
-             ->middleware('api')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/api.php'));
     }
 }
