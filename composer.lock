@@ -4,8 +4,66 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3aeff3e3261141036c273c655cac7e6c",
+    "content-hash": "a70907c3390eedc2580681617ca99a5f",
     "packages": [
+        {
+            "name": "activecollab/etcd",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/activecollab/etcd.git",
+                "reference": "8304a8d57350d913b0bdd259e97a731c42152bfb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/activecollab/etcd/zipball/8304a8d57350d913b0bdd259e97a731c42152bfb",
+                "reference": "8304a8d57350d913b0bdd259e97a731c42152bfb",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ActiveCollab\\Etcd\\": "src",
+                    "ActiveCollab\\Etcd\\Test\\": "test/src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ilija Studen",
+                    "email": "ilija.studen@activecollab.com"
+                },
+                {
+                    "name": "Cong Peijun",
+                    "email": "p.cong@linkorb.com"
+                }
+            ],
+            "description": "etcd client with minimal dependencies",
+            "homepage": "https://labs.activecollab.com",
+            "keywords": [
+                "client",
+                "configuration",
+                "etcd"
+            ],
+            "abandoned": true,
+            "time": "2016-01-09T13:45:46+00:00"
+        },
         {
             "name": "appstract/laravel-options",
             "version": "2.2.0",

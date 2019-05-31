@@ -33,8 +33,10 @@ Route::group([], function ($router) {
 	Route::group([
 		'prefix' => 'rpc',
 	], function ($router) {
-		Route::get('etcd', 'Rpc\EtcdPHPController@index')->name('migrate.index');
+		Route::get('etcd', 'Rpc\EtcdPHPController@index')->name('etcd.index');
+		Route::get('activecollab-etcd', 'Rpc\ActivecollabEtcdController@index')->name('activecollab-etc.index');
 	});
+
 	Route::group([
 		'prefix' => LaravelLocalization::setLocale(), // mcamara/laravel-localization
 	], function() {
