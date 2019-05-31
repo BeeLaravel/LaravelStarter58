@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.1.3",
+        "activecollab/etcd": "^1.0",
         "appstract/laravel-options": "^2.2",
         "artisaninweb/laravel-soap": "0.3.0.9",
         "awssat/laravel-visits": "^1.5",
@@ -25,6 +26,7 @@
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
         "laravolt/avatar": "^2.2",
+        "linkorb/etcd-php": "^1.6",
         "lorisleiva/laravel-search-string": "^0.1.3",
         "lubusin/laravel-decomposer": "^1.2",
         "maatwebsite/excel": "^3.1",

@@ -29,6 +29,14 @@ Route::group([], function ($router) {
 		Route::get('/hashids', 'Parser\HashidsController@index')->name('parser.hashids');
         Route::get('/barcode', 'BarCodeController@index')->name('parser.barcode');;
 	});
+	// ### 迁移
+	Route::group([
+		'prefix' => 'rpc',
+	], function ($router) {
+		Route::get('etcd', 'Rpc\EtcdPHPController@index')->name('etcd.index');
+		Route::get('activecollab-etcd', 'Rpc\ActivecollabEtcdController@index')->name('activecollab-etc.index');
+	});
+
 	Route::group([
 		'prefix' => LaravelLocalization::setLocale(), // mcamara/laravel-localization
 	], function() {
