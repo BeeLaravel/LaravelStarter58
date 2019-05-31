@@ -13,7 +13,7 @@
 </head>
 <body>
     <div id="app">
-        <header-first></header-first>
+        <header-first title="SVG 管理"></header-first>
         <list-sixth></list-sixth>
         <footer-first></footer-first>
         <tip-first :message="message"></tip-first>

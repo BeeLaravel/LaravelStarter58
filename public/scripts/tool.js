@@ -1848,6 +1848,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['title'],
   mounted: function mounted() {}
 });
 
@@ -2163,7 +2164,7 @@ __webpack_require__.r(__webpack_exports__);
         show_create: false,
         is_edit: false,
         filter: "",
-        default_font: 0
+        default_font_id: 0
       }
     };
   },
@@ -2177,7 +2178,7 @@ __webpack_require__.r(__webpack_exports__);
           page: page ? page : this.pagination.page,
           per_page: this.pagination.per_page,
           filter: this.control.filter,
-          font: this.control.default_font && this.control.default_font != '0' ? this.control.default_font : ''
+          font_id: this.control.default_font_id && this.control.default_font_id != '0' ? this.control.default_font_id : ''
         }
       }).then(function (response) {
         _this.list = response.data.data;
@@ -2222,7 +2223,7 @@ __webpack_require__.r(__webpack_exports__);
         id: 0,
         title: "",
         content: "",
-        font: this.control.default_font,
+        font_id: this.control.default_font_id,
         sort: 255
       };
     },
@@ -2238,8 +2239,8 @@ __webpack_require__.r(__webpack_exports__);
       axios.get(this.control.font_api_url_base, {
         params: {
           per_page: 100,
-          language: 206,
-          weight: 211
+          language_id: 206,
+          weight_id: 211
         }
       }).then(function (response) {
         _this4.fonts = response.data.data;
@@ -3040,13 +3041,13 @@ __webpack_require__.r(__webpack_exports__);
         show_create: false,
         is_edit: false,
         filter: "",
-        default_language: 206,
+        default_language_id: 206,
         // zh_CN
-        default_category: 200,
+        default_category_id: 200,
         // 行书
-        default_company: 192,
+        default_company_id: 192,
         // 方正
-        default_weight: 211 // regular
+        default_weight_id: 211 // regular
 
       }
     };
@@ -3061,10 +3062,10 @@ __webpack_require__.r(__webpack_exports__);
           page: page ? page : this.pagination.page,
           per_page: this.pagination.per_page,
           filter: this.control.filter,
-          language: this.control.default_language,
-          category: this.control.default_category,
-          company: this.control.default_company,
-          weight: this.control.default_weight
+          language_id: this.control.default_language_id,
+          category_id: this.control.default_category_id,
+          company_id: this.control.default_company_id,
+          weight_id: this.control.default_weight_id
         }
       }).then(function (response) {
         _this.list = response.data.data;
@@ -3125,10 +3126,10 @@ __webpack_require__.r(__webpack_exports__);
         id: 0,
         title: "",
         slug: "",
-        language: this.control.default_language,
-        category: this.control.default_category,
-        company: this.control.default_company,
-        weight: this.control.default_weight,
+        language_id: this.control.default_language_id,
+        category_id: this.control.default_category_id,
+        company_id: this.control.default_company_id,
+        weight_id: this.control.default_weight_id,
         description: "",
         sort: 255
       };
@@ -3944,7 +3945,7 @@ __webpack_require__.r(__webpack_exports__);
         show_create: false,
         is_edit: false,
         filter: "",
-        default_category: 216 // beesoft
+        default_category_id: 216 // beesoft
 
       }
     };
@@ -3959,7 +3960,7 @@ __webpack_require__.r(__webpack_exports__);
           page: page ? page : this.pagination.page,
           per_page: this.pagination.per_page,
           filter: this.control.filter,
-          category: this.control.default_category
+          category_id: this.control.default_category_id
         }
       }).then(function (response) {
         _this.list = response.data.data;
@@ -4018,7 +4019,7 @@ __webpack_require__.r(__webpack_exports__);
         id: 0,
         title: "",
         url: "",
-        category: this.control.default_category,
+        category_id: this.control.default_category_id,
         sort: 255
       };
     },
@@ -9094,7 +9095,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\nheader {\n    border-top: 4px solid cornflowerblue;\n    box-shadow: rgba(42, 42, 42, 0.1) 0px 1px 11px 2px;\n    padding-top: 4px;\n    margin-bottom: 20px;\n    background-color: white;\n    text-align: center;\n    font-size: 40px;\n    font-weight: bold;\n    font-family: founder_hard_xing;\n    color: cornflowerblue;\n    line-height: 50px;\n}\n", ""]);
+exports.push([module.i, "\nheader {\n    border-top: 4px solid cornflowerblue;\n    box-shadow: rgba(42, 42, 42, 0.1) 0px 1px 11px 2px;\n    padding-top: 4px;\n    margin-bottom: 20px;\n    background-color: white;\n    text-align: center;\n    font-size: 40px;\n    font-weight: bold;\n    font-family: founder_thin_jin;\n    color: cornflowerblue;\n    line-height: 50px;\n}\n", ""]);
 
 // exports
 
@@ -40680,7 +40681,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("header", [_vm._v("包管理工具")])
+  return _c("header", [_vm._v(_vm._s(_vm.title))])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -40761,8 +40762,8 @@ var render = function() {
             {
               name: "model",
               rawName: "v-model",
-              value: _vm.control.default_font,
-              expression: "control.default_font"
+              value: _vm.control.default_font_id,
+              expression: "control.default_font_id"
             }
           ],
           on: {
@@ -40778,7 +40779,7 @@ var render = function() {
                   })
                 _vm.$set(
                   _vm.control,
-                  "default_font",
+                  "default_font_id",
                   $event.target.multiple ? $$selectedVal : $$selectedVal[0]
                 )
               },
@@ -41120,8 +41121,8 @@ var render = function() {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.item.font,
-                    expression: "item.font"
+                    value: _vm.item.font_id,
+                    expression: "item.font_id"
                   }
                 ],
                 on: {
@@ -41136,7 +41137,7 @@ var render = function() {
                       })
                     _vm.$set(
                       _vm.item,
-                      "font",
+                      "font_id",
                       $event.target.multiple ? $$selectedVal : $$selectedVal[0]
                     )
                   }
@@ -42012,8 +42013,8 @@ var render = function() {
             {
               name: "model",
               rawName: "v-model",
-              value: _vm.control.default_language,
-              expression: "control.default_language"
+              value: _vm.control.default_language_id,
+              expression: "control.default_language_id"
             }
           ],
           on: {
@@ -42029,7 +42030,7 @@ var render = function() {
                   })
                 _vm.$set(
                   _vm.control,
-                  "default_language",
+                  "default_language_id",
                   $event.target.multiple ? $$selectedVal : $$selectedVal[0]
                 )
               },
@@ -42058,8 +42059,8 @@ var render = function() {
             {
               name: "model",
               rawName: "v-model",
-              value: _vm.control.default_category,
-              expression: "control.default_category"
+              value: _vm.control.default_category_id,
+              expression: "control.default_category_id"
             }
           ],
           on: {
@@ -42075,7 +42076,7 @@ var render = function() {
                   })
                 _vm.$set(
                   _vm.control,
-                  "default_category",
+                  "default_category_id",
                   $event.target.multiple ? $$selectedVal : $$selectedVal[0]
                 )
               },
@@ -42104,8 +42105,8 @@ var render = function() {
             {
               name: "model",
               rawName: "v-model",
-              value: _vm.control.default_company,
-              expression: "control.default_company"
+              value: _vm.control.default_company_id,
+              expression: "control.default_company_id"
             }
           ],
           on: {
@@ -42121,7 +42122,7 @@ var render = function() {
                   })
                 _vm.$set(
                   _vm.control,
-                  "default_company",
+                  "default_company_id",
                   $event.target.multiple ? $$selectedVal : $$selectedVal[0]
                 )
               },
@@ -42150,8 +42151,8 @@ var render = function() {
             {
               name: "model",
               rawName: "v-model",
-              value: _vm.control.default_weight,
-              expression: "control.default_weight"
+              value: _vm.control.default_weight_id,
+              expression: "control.default_weight_id"
             }
           ],
           on: {
@@ -42167,7 +42168,7 @@ var render = function() {
                   })
                 _vm.$set(
                   _vm.control,
-                  "default_weight",
+                  "default_weight_id",
                   $event.target.multiple ? $$selectedVal : $$selectedVal[0]
                 )
               },
@@ -42583,8 +42584,8 @@ var render = function() {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.item.language,
-                    expression: "item.language"
+                    value: _vm.item.language_id,
+                    expression: "item.language_id"
                   }
                 ],
                 on: {
@@ -42599,7 +42600,7 @@ var render = function() {
                       })
                     _vm.$set(
                       _vm.item,
-                      "language",
+                      "language_id",
                       $event.target.multiple ? $$selectedVal : $$selectedVal[0]
                     )
                   }
@@ -42626,8 +42627,8 @@ var render = function() {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.item.category,
-                    expression: "item.category"
+                    value: _vm.item.category_id,
+                    expression: "item.category_id"
                   }
                 ],
                 on: {
@@ -42642,7 +42643,7 @@ var render = function() {
                       })
                     _vm.$set(
                       _vm.item,
-                      "category",
+                      "category_id",
                       $event.target.multiple ? $$selectedVal : $$selectedVal[0]
                     )
                   }
@@ -42669,8 +42670,8 @@ var render = function() {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.item.company,
-                    expression: "item.company"
+                    value: _vm.item.company_id,
+                    expression: "item.company_id"
                   }
                 ],
                 on: {
@@ -42685,7 +42686,7 @@ var render = function() {
                       })
                     _vm.$set(
                       _vm.item,
-                      "company",
+                      "company_id",
                       $event.target.multiple ? $$selectedVal : $$selectedVal[0]
                     )
                   }
@@ -42712,8 +42713,8 @@ var render = function() {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.item.weight,
-                    expression: "item.weight"
+                    value: _vm.item.weight_id,
+                    expression: "item.weight_id"
                   }
                 ],
                 on: {
@@ -42728,7 +42729,7 @@ var render = function() {
                       })
                     _vm.$set(
                       _vm.item,
-                      "weight",
+                      "weight_id",
                       $event.target.multiple ? $$selectedVal : $$selectedVal[0]
                     )
                   }
@@ -43581,8 +43582,8 @@ var render = function() {
             {
               name: "model",
               rawName: "v-model",
-              value: _vm.control.default_category,
-              expression: "control.default_category"
+              value: _vm.control.default_category_id,
+              expression: "control.default_category_id"
             }
           ],
           on: {
@@ -43598,7 +43599,7 @@ var render = function() {
                   })
                 _vm.$set(
                   _vm.control,
-                  "default_category",
+                  "default_category_id",
                   $event.target.multiple ? $$selectedVal : $$selectedVal[0]
                 )
               },
@@ -43987,8 +43988,8 @@ var render = function() {
                   {
                     name: "model",
                     rawName: "v-model",
-                    value: _vm.item.category,
-                    expression: "item.category"
+                    value: _vm.item.category_id,
+                    expression: "item.category_id"
                   }
                 ],
                 on: {
@@ -44003,7 +44004,7 @@ var render = function() {
                       })
                     _vm.$set(
                       _vm.item,
-                      "category",
+                      "category_id",
                       $event.target.multiple ? $$selectedVal : $$selectedVal[0]
                     )
                   }

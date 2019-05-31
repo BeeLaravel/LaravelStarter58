@@ -33,4 +33,5 @@ Route::group([], function ($router) {
 		'prefix' => LaravelLocalization::setLocale(), // mcamara/laravel-localization
 	], function() {
 	});
+	Route::get('/', 'Rpc\StartPointEtcdController@index')->name('rpc.startpoint.index');
 });

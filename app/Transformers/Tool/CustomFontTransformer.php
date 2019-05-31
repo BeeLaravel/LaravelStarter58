@@ -14,6 +14,7 @@ class CustomFontTransformer extends TransformerAbstract {
 
             'title' => $item->title,
             'content' => $item->content,
+            'font_id' => $item->font_id,
             'font' => $item->font,
             'url' => $item->url,
 

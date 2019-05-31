@@ -17,15 +17,13 @@ class CreateConfiguresTable extends Migration
             $table->increments('id');
             $table->string('title')->comment('标题');
             $table->string('slug')->comment('标识');
-            $table->text('description')->nullable()->comment('描述');
-            $table->text('default')->nullable()->comment('默认');
+            $table->text('content')->comment('内容');
+            $table->unsignedInteger('company_id')->default(0)->comment('公司 ID');
 
             $table->unsignedTinyInteger('sort')->default(255);
             $table->integer('created_by')->default(0);
             $table->timestamps();
             $table->softDeletes();
-
-            $table->comment = '配置';
         });
     }
 

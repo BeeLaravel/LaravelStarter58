@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSvgsTable extends Migration
+class CreateEnvironmentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreateSvgsTable extends Migration
      */
     public function up()
     {
-        Schema::create('svgs', function (Blueprint $table) {
+        Schema::create('environments', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('title')->comment('标题');
-            $table->string('url')->comment('URL');
-            $table->unsignedInteger('category_id')->comment('分类');
+            $table->string('key')->comment('键');
+            $table->string('value')->comment('值');
+            $table->unsignedInteger('company_id')->comment('公司 ID');
 
             $table->unsignedTinyInteger('sort')->default(255);
             $table->integer('created_by')->default(0);
@@ -33,6 +33,6 @@ class CreateSvgsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('svgs');
+        Schema::dropIfExists('environments');
     }
 }

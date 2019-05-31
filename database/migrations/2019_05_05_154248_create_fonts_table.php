@@ -18,10 +18,10 @@ class CreateFontsTable extends Migration
             $table->string('title')->comment('标题');
             $table->string('slug')->comment('标识');
             $table->string('url')->comment('URL');
-            $table->unsignedInteger('language')->comment('语言');
-            $table->unsignedInteger('category')->comment('分类');
-            $table->unsignedInteger('company')->comment('制造商');
-            $table->unsignedInteger('weight')->comment('粗细');
+            $table->unsignedInteger('language_id')->comment('语言');
+            $table->unsignedInteger('category_id')->comment('分类');
+            $table->unsignedInteger('company_id')->comment('制造商');
+            $table->unsignedInteger('weight_id')->comment('粗细');
             $table->text('description')->nullable()->comment('描述');
 
             $table->unsignedTinyInteger('sort')->default(255);

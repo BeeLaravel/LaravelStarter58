@@ -1,5 +1,5 @@
 <template>
-    <header>包管理工具</header>
+    <header>{{title}}</header>
 </template>
 <style>
     header {
@@ -11,13 +11,16 @@
         text-align: center;
         font-size: 40px;
         font-weight: bold;
-        font-family: founder_hard_xing;
+        font-family: founder_thin_jin;
         color: cornflowerblue;
         line-height: 50px;
     }
 </style>
 <script>
     export default {
+        props: [
+            'title',
+        ],
         mounted() {
         }
     }

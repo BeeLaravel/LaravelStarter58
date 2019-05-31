@@ -4,28 +4,33 @@
 // founder 方正
 @font-face { // 方正硬笔行书简体
     font-family: founder_hard_xing;
-    src: url('/fonts/zh_CN/founder_hard_xing.ttf');
+    // src: url('/fonts/zh_CN/founder_hard_xing.ttf');
+    src: url('/fonts/zh_CN/B3jEg2KWrA.ttf'); // 1
 }
 @font-face { // 方正硬笔楷书简体
     font-family: founder_hard_kai;
-    src: url('/fonts/zh_CN/founder_hard_kai.ttf');
-}
-@font-face { // 方正瘦金书简体
-    font-family: founder_thin_jin;
-    src: url('/fonts/zh_CN/founder_thin_jin.ttf');
+    // src: url('/fonts/zh_CN/founder_hard_kai.ttf');
+    src: url('/fonts/zh_CN/V7ZEVrEnBk.ttf'); // 2
 }
 @font-face { // 方正静蕾简体
     font-family: founder_jinglei;
-    src: url('/fonts/zh_CN/founder_jinglei.ttf');
+    // src: url('/fonts/zh_CN/founder_jinglei.ttf');
+    src: url('/fonts/zh_CN/QOXEQ6Lba4.ttf'); // 3
+}
+@font-face { // 方正瘦金书简体
+    font-family: founder_thin_jin;
+    // src: url('/fonts/zh_CN/founder_thin_jin.ttf');
+    src: url('/fonts/zh_CN/AkaK3mL2bq.ttf'); // 4
 }
 // apple 苹方
 @font-face { // 苹方黑体
     font-family: apple_hei;
-    src: url('/fonts/zh_CN/apple_hei.ttf');
+    // src: url('/fonts/zh_CN/apple_hei.ttf');
+    src: url('/fonts/zh_CN/V7ZEVrEnBk.ttf'); // 5
 }
 // zh_TW
 // apple 苹方
 @font-face { // 苹方黑体
     font-family: apple_hei_tw;
-    src: url('/fonts/zh_TW/apple_hei.ttf');
+    src: url('/fonts/zh_TW/apple_hei.ttf'); // 6
 }

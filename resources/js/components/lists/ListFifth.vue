@@ -213,7 +213,7 @@
                 <input type="text" placeholder="输入 名称/内容 搜索" v-model="control.filter" @blur="search()" @keyup.enter="search()">
                 <button type="submit" @click="search()">搜索</button>
             </div>
-            <select v-model="control.default_font" @change="search()">
+            <select v-model="control.default_font_id" @change="search()">
                 <option value="0">==请选择==</option>
                 <option v-for="item in fonts" :value="item.id">{{item.title}}</option>
             </select>
@@ -266,7 +266,7 @@
                     <input type="text" placeholder="标题" v-model="item.title">
                 </div>
                 <div class="input">
-                    <select v-model="item.font">
+                    <select v-model="item.font_id">
                         <option value="0">==请选择==</option>
                         <option v-for="item in fonts" :value="item.id">{{item.title}}</option>
                     </select>
@@ -300,7 +300,7 @@
                     show_create: false,
                     is_edit: false,
                     filter: "",
-                    default_font: 0,
+                    default_font_id: 0,
                 },
             }
         },
@@ -311,7 +311,7 @@
                         page: page ? page : this.pagination.page,
                         per_page: this.pagination.per_page,
                         filter: this.control.filter,
-                        font: this.control.default_font && this.control.default_font!='0' ? this.control.default_font : '',
+                        font_id: this.control.default_font_id && this.control.default_font_id!='0' ? this.control.default_font_id : '',
                     }
                 }).then(response => {
                     this.list = response.data.data;
@@ -362,7 +362,7 @@
                     id: 0,
                     title: "",
                     content: "",
-                    font: this.control.default_font,
+                    font_id: this.control.default_font_id,
                     sort: 255,
                 };
             },
@@ -377,8 +377,8 @@
                 axios.get(this.control.font_api_url_base, {
                     params: {
                         per_page: 100,
-                        language: 206,
-                        weight: 211,
+                        language_id: 206,
+                        weight_id: 211,
                     }
                 }).then(response => {
                     this.fonts = response.data.data;

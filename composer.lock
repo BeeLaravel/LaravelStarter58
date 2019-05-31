@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ed815faf35b2d8e58b63253ae7eb418d",
+    "content-hash": "6f69f682e979d682b14e8ee3f007d0f6",
     "packages": [
         {
             "name": "appstract/laravel-options",
@@ -462,7 +462,8 @@
             "dist": {
                 "type": "path",
                 "url": "../weather",
-                "reference": "9bae853f477a5f247afff305de383467e0c90b2b"
+                "reference": "9bae853f477a5f247afff305de383467e0c90b2b",
+                "shasum": null
             },
             "require": {
                 "guzzlehttp/guzzle": "^6.3"
@@ -1441,6 +1442,53 @@
                 "trusted proxy"
             ],
             "time": "2019-01-10T14:06:47+00:00"
+        },
+        {
+            "name": "google/protobuf",
+            "version": "v3.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/protocolbuffers/protobuf-php.git",
+                "reference": "a257235dc1a0d45f8cfc641d0c2ad852f57396c4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/protocolbuffers/protobuf-php/zipball/a257235dc1a0d45f8cfc641d0c2ad852f57396c4",
+                "reference": "a257235dc1a0d45f8cfc641d0c2ad852f57396c4",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=4.8.0"
+            },
+            "suggest": {
+                "ext-bcmath": "Need to support JSON deserialization"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Google\\Protobuf\\": "src/Google/Protobuf",
+                    "GPBMetadata\\Google\\Protobuf\\": "src/GPBMetadata/Google/Protobuf"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "proto library for PHP",
+            "homepage": "https://developers.google.com/protocol-buffers/",
+            "keywords": [
+                "proto"
+            ],
+            "time": "2019-05-29T00:06:29+00:00"
         },
         {
             "name": "graham-campbell/manager",
@@ -4917,6 +4965,60 @@
             "time": "2019-02-15T10:56:05+00:00"
         },
         {
+            "name": "start-point/etcd-php",
+            "version": "V1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ouqiang/etcd-php.git",
+                "reference": "a0faf8852502597d8f18730567e1965b2fcdeddc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ouqiang/etcd-php/zipball/a0faf8852502597d8f18730567e1965b2fcdeddc",
+                "reference": "a0faf8852502597d8f18730567e1965b2fcdeddc",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~6.0",
+                "php": ">= 5.5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.5.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Etcd\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "ouqiang",
+                    "email": "qingqianludao@gmail.com",
+                    "homepage": "https://github.com/ouqiang"
+                }
+            ],
+            "description": "PHP client for Etcd v3",
+            "homepage": "https://github.com/ouqiang/etcd-php",
+            "keywords": [
+                "etcd",
+                "etcd-client",
+                "etcd-php",
+                "etcdv3"
+            ],
+            "time": "2017-06-21T06:49:55+00:00"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "v6.2.0",
             "source": {
@@ -4983,6 +5085,63 @@
                 "mailer"
             ],
             "time": "2019-03-10T07:52:41+00:00"
+        },
+        {
+            "name": "swoole/etcd-client",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/swoole/grpc-client.git",
+                "reference": "d040a2e2f520a2698bc11c6fd322cdc4ec5041d4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/swoole/grpc-client/zipball/d040a2e2f520a2698bc11c6fd322cdc4ec5041d4",
+                "reference": "d040a2e2f520a2698bc11c6fd322cdc4ec5041d4",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "google/protobuf": "^3",
+                "php": ">=7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/Grpc",
+                    "src/Etcd"
+                ],
+                "files": [
+                    "src/include/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "twosee",
+                    "email": "twose@qq.com"
+                }
+            ],
+            "description": "Grpc PHP Client base on Swoole Http2 Coroutine",
+            "keywords": [
+                "client",
+                "coroutine",
+                "etcd",
+                "gRPC",
+                "http",
+                "http2",
+                "php",
+                "swoole"
+            ],
+            "time": "2018-11-16T07:03:56+00:00"
         },
         {
             "name": "symfony/console",

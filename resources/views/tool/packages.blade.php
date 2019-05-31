@@ -13,7 +13,7 @@
 </head>
 <body>
     <div id="app">
-        <header-first></header-first>
+        <header-first title="包管理"></header-first>
         <list-second></list-second>
         <footer-first></footer-first>
         <tip-first :message="message"></tip-first>

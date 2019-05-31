@@ -16,10 +16,10 @@ class FontController extends Controller { // 包管理
         $page = $request->query('page', 1);
         $per_page = $request->query('per_page', 20);
         $filter = $request->query('filter', "");
-        $language = $request->query('language', "");
-        $category = $request->query('category', "");
-        $company = $request->query('company', "");
-        $weight = $request->query('weight', "");
+        $language_id = $request->query('language_id', "");
+        $category_id = $request->query('category_id', "");
+        $company_id = $request->query('company_id', "");
+        $weight_id = $request->query('weight_id', "");
 
         $items = new ThisModel;
 
@@ -30,10 +30,10 @@ class FontController extends Controller { // 包管理
                 ->orWhere('description', 'like', $filter)
                 ->orWhere('slug', 'like', $filter);
         });
-        if ( $language ) $items = $items->where('language', $language);
-        if ( $category ) $items = $items->where('category', $category);
-        if ( $company ) $items = $items->where('company', $company);
-        if ( $weight ) $items = $items->where('weight', $weight);
+        if ( $language_id ) $items = $items->where('language_id', $language_id);
+        if ( $category_id ) $items = $items->where('category_id', $category_id);
+        if ( $company_id ) $items = $items->where('company_id', $company_id);
+        if ( $weight_id ) $items = $items->where('weight_id', $weight_id);
   
         $items = $items
             ->orderBy($order_column, $order_direction)

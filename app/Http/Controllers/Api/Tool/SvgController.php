@@ -16,7 +16,7 @@ class SvgController extends Controller { // 包管理
         $page = $request->query('page', 1);
         $per_page = $request->query('per_page', 20);
         $filter = $request->query('filter', "");
-        $category = $request->query('category', "");
+        $category_id = $request->query('category_id', "");
         $md5 = $request->query('md5', "");
         $sha1 = $request->query('sha1', "");
 
@@ -29,7 +29,7 @@ class SvgController extends Controller { // 包管理
         });
         if ( $md5 ) $items = $items->where('md5', $md5);
         if ( $sha1 ) $items = $items->where('sha1', $sha1);
-        if ( $category ) $items = $items->where('category', $category);
+        if ( $category_id ) $items = $items->where('category_id', $category_id);
   
         $items = $items
             ->orderBy($order_column, $order_direction)

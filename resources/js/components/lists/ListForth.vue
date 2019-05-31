@@ -213,19 +213,19 @@
                 <input type="text" placeholder="输入 标识/名称/描述 搜索" v-model="control.filter" @blur="search()" @keyup.enter="search()">
                 <button type="submit" @click="search()">搜索</button>
             </div>
-            <select v-model="control.default_language" @change="search()">
+            <select v-model="control.default_language_id" @change="search()">
                 <option value="">==请选择==</option>
                 <option v-for="item in languages" :value="item.id">{{item.title}}</option>
             </select>
-            <select v-model="control.default_category" @change="search()">
+            <select v-model="control.default_category_id" @change="search()">
                 <option value="">==请选择==</option>
                 <option v-for="item in categories" :value="item.id">{{item.title}}</option>
             </select>
-            <select v-model="control.default_company" @change="search()">
+            <select v-model="control.default_company_id" @change="search()">
                 <option value="">==请选择==</option>
                 <option v-for="item in companies" :value="item.id">{{item.title}}</option>
             </select>
-            <select v-model="control.default_weight" @change="search()">
+            <select v-model="control.default_weight_id" @change="search()">
                 <option value="">==请选择==</option>
                 <option v-for="item in weights" :value="item.id">{{item.title}}</option>
             </select>
@@ -289,25 +289,25 @@
                     <input type="hidden" v-model="item.url">
                 </div>
                 <div class="input">
-                    <select v-model="item.language">
+                    <select v-model="item.language_id">
                         <option value="">==请选择==</option>
                         <option v-for="item in languages" :value="item.id">{{item.title}}</option>
                     </select>
                 </div>
                 <div class="input">
-                    <select v-model="item.category">
+                    <select v-model="item.category_id">
                         <option value="">==请选择==</option>
                         <option v-for="item in categories" :value="item.id">{{item.title}}</option>
                     </select>
                 </div>
                 <div class="input">
-                    <select v-model="item.company">
+                    <select v-model="item.company_id">
                         <option value="">==请选择==</option>
                         <option v-for="item in companies" :value="item.id">{{item.title}}</option>
                     </select>
                 </div>
                 <div class="input">
-                    <select v-model="item.weight">
+                    <select v-model="item.weight_id">
                         <option value="">==请选择==</option>
                         <option v-for="item in weights" :value="item.id">{{item.title}}</option>
                     </select>
@@ -342,10 +342,10 @@
                     show_create: false,
                     is_edit: false,
                     filter: "",
-                    default_language: 206, // zh_CN
-                    default_category: 200, // 行书
-                    default_company: 192, // 方正
-                    default_weight: 211, // regular
+                    default_language_id: 206, // zh_CN
+                    default_category_id: 200, // 行书
+                    default_company_id: 192, // 方正
+                    default_weight_id: 211, // regular
                 },
             }
         },
@@ -356,10 +356,10 @@
                         page: page ? page : this.pagination.page,
                         per_page: this.pagination.per_page,
                         filter: this.control.filter,
-                        language: this.control.default_language,
-                        category: this.control.default_category,
-                        company: this.control.default_company,
-                        weight: this.control.default_weight,
+                        language_id: this.control.default_language_id,
+                        category_id: this.control.default_category_id,
+                        company_id: this.control.default_company_id,
+                        weight_id: this.control.default_weight_id,
                     }
                 }).then(response => {
                     this.list = response.data.data;
@@ -423,10 +423,10 @@
                     id: 0,
                     title: "",
                     slug: "",
-                    language: this.control.default_language,
-                    category: this.control.default_category,
-                    company: this.control.default_company,
-                    weight: this.control.default_weight,
+                    language_id: this.control.default_language_id,
+                    category_id: this.control.default_category_id,
+                    company_id: this.control.default_company_id,
+                    weight_id: this.control.default_weight_id,
                     description: "",
                     sort: 255,
                 };

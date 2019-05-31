@@ -17,7 +17,7 @@ class CreateCustomFontsTable extends Migration
             $table->increments('id');
             $table->string('title')->comment('标题');
             $table->text('content')->comment('内容');
-            $table->unsignedInteger('font')->comment('字体');
+            $table->unsignedInteger('font_id')->comment('字体');
 
             $table->unsignedTinyInteger('sort')->default(255);
             $table->integer('created_by')->default(0);

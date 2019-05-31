@@ -213,7 +213,7 @@
                 <input type="text" placeholder="输入 标识/名称/描述 搜索" v-model="control.filter" @blur="search()" @keyup.enter="search()">
                 <button type="submit" @click="search()">搜索</button>
             </div>
-            <select v-model="control.default_category" @change="search()">
+            <select v-model="control.default_category_id" @change="search()">
                 <option value="">==请选择==</option>
                 <option v-for="item in categories" :value="item.id">{{item.title}}</option>
             </select>
@@ -272,7 +272,7 @@
                     <input type="hidden" v-model="item.url">
                 </div>
                 <div class="input">
-                    <select v-model="item.category">
+                    <select v-model="item.category_id">
                         <option value="">==请选择==</option>
                         <option v-for="item in categories" :value="item.id">{{item.title}}</option>
                     </select>
@@ -301,7 +301,7 @@
                     show_create: false,
                     is_edit: false,
                     filter: "",
-                    default_category: 216, // beesoft
+                    default_category_id: 216, // beesoft
                 },
             }
         },
@@ -312,7 +312,7 @@
                         page: page ? page : this.pagination.page,
                         per_page: this.pagination.per_page,
                         filter: this.control.filter,
-                        category: this.control.default_category,
+                        category_id: this.control.default_category_id,
                     }
                 }).then(response => {
                     this.list = response.data.data;
@@ -374,7 +374,7 @@
                     id: 0,
                     title: "",
                     url: "",
-                    category: this.control.default_category,
+                    category_id: this.control.default_category_id,
                     sort: 255,
                 };
             },

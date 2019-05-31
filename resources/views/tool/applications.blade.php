@@ -13,7 +13,7 @@
 </head>
 <body>
     <div id="app">
-        <header-first></header-first>
+        <header-first title="应用管理"></header-first>
         <list-first></list-first>
         <footer-first></footer-first>
     </div>

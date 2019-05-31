@@ -14,7 +14,7 @@ class CustomFontController extends Controller { // 包管理
         $page = $request->query('page', 1);
         $per_page = $request->query('per_page', 20);
         $filter = $request->query('filter', "");
-        $font = $request->query('font', "");
+        $font_id = $request->query('font_id', "");
 
         $items = new ThisModel;
 
@@ -24,7 +24,7 @@ class CustomFontController extends Controller { // 包管理
             return $query->where('title', 'like', $filter)
                 ->orWhere('content', 'like', $filter);
         });
-        if ( $font ) $items = $items->where('font', $font);
+        if ( $font_id ) $items = $items->where('font_id', $font_id);
   
         $items = $items
             ->orderBy($order_column, $order_direction)
