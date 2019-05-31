@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ed815faf35b2d8e58b63253ae7eb418d",
+    "content-hash": "3aeff3e3261141036c273c655cac7e6c",
     "packages": [
         {
             "name": "appstract/laravel-options",
@@ -2764,6 +2764,66 @@
             "time": "2017-06-12T11:04:56+00:00"
         },
         {
+            "name": "linkorb/etcd-php",
+            "version": "v1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/linkorb/etcd-php.git",
+                "reference": "bb17b4f84b44cd18ef36e93f8d13c05714430fc2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/linkorb/etcd-php/zipball/bb17b4f84b44cd18ef36e93f8d13c05714430fc2",
+                "reference": "bb17b4f84b44cd18ef36e93f8d13c05714430fc2",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^6.3",
+                "php": ">=5.6",
+                "symfony/console": "^2.4 || ^3.0 || ^4.0",
+                "symfony/filesystem": "^2.4 || ^3.0 || ^4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "bin": [
+                "bin/etcd-php"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LinkORB\\Component\\Etcd\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Joost Faassen",
+                    "email": "j.faassen@linkorb.com",
+                    "role": "Development"
+                }
+            ],
+            "description": "Etcd client library for PHP",
+            "homepage": "http://www.github.com/linkorb/etcd-php",
+            "keywords": [
+                "api",
+                "configuration",
+                "distributed",
+                "etcd",
+                "php"
+            ],
+            "time": "2019-03-27T10:12:48+00:00"
+        },
+        {
             "name": "lorisleiva/laravel-search-string",
             "version": "v0.1.3",
             "source": {
@@ -5389,6 +5449,62 @@
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
             "time": "2019-03-30T15:58:42+00:00"
+        },
+        {
+            "name": "symfony/filesystem",
+            "version": "v4.2.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/filesystem.git",
+                "reference": "e16b9e471703b2c60b95f14d31c1239f68f11601"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/e16b9e471703b2c60b95f14d31c1239f68f11601",
+                "reference": "e16b9e471703b2c60b95f14d31c1239f68f11601",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": "^7.1.3",
+                "symfony/polyfill-ctype": "~1.8"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Filesystem\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Filesystem Component",
+            "homepage": "https://symfony.com",
+            "time": "2019-02-07T11:40:08+00:00"
         },
         {
             "name": "symfony/finder",
@@ -8977,62 +9093,6 @@
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
             "time": "2016-10-03T07:35:21+00:00"
-        },
-        {
-            "name": "symfony/filesystem",
-            "version": "v4.2.8",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/filesystem.git",
-                "reference": "e16b9e471703b2c60b95f14d31c1239f68f11601"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/e16b9e471703b2c60b95f14d31c1239f68f11601",
-                "reference": "e16b9e471703b2c60b95f14d31c1239f68f11601",
-                "shasum": "",
-                "mirrors": [
-                    {
-                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
-                        "preferred": true
-                    }
-                ]
-            },
-            "require": {
-                "php": "^7.1.3",
-                "symfony/polyfill-ctype": "~1.8"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "4.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Filesystem\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Filesystem Component",
-            "homepage": "https://symfony.com",
-            "time": "2019-02-07T11:40:08+00:00"
         },
         {
             "name": "theseer/tokenizer",
