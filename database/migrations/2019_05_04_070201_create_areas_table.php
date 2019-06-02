@@ -18,7 +18,7 @@ class CreateWarehousesTable extends Migration
 
             $table->string('slug')->comment('标识');
             $table->string('title')->comment('标题');
-            $table->unsignedInteger('type')->comment('類型');
+            $table->unsignedInteger('warehouse_id')->comment('仓库 ID');
             $table->text('description')->comment('描述');
 
             $table->unsignedTinyInteger('sort')->default(255);

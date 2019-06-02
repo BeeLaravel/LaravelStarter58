@@ -35,17 +35,21 @@ $api = app('Dingo\Api\Routing\Router');
 	    // 	$api->resource('cases', '\App\Http\Controllers\Api\Project\CasesController'); // 案例 Case
 		// });
 
-		// $api->group([ // 结构 Structure
-	    // 	'prefix' => 'structure',
-	    // ], function ($api) {
-	    // 	$api->get('category_items/{parent_id}', '\App\Http\Controllers\Api\Structure\CategoryItemController@index');
-	    // 	$api->resource('category_items', '\App\Http\Controllers\Api\Structure\CategoryItemController'); // 分类 项
-		// });
-
 		$api->group([ // 结构 Structure
 	    	'prefix' => 'structure',
-	    ], function ($api) {
+	  ], function ($api) {
+			$api->get('category_items/{parent_id}', '\App\Http\Controllers\Api\Structure\CategoryItemController@index');
 	    	$api->resource('category_items', '\App\Http\Controllers\Api\Structure\CategoryItemController'); // 分类 项
+		});
+
+		$api->group([ // 倉庫 warehouse
+	    	'prefix' => 'warehouse',
+	  ], function ($api) {
+				$api->resource('warehouses', '\App\Http\Controllers\Api\Warehouse\WarehouseController'); // 倉庫
+				$api->resource('areas', '\App\Http\Controllers\Api\Warehouse\AreaController'); // 倉庫分區
+				$api->resource('locations', '\App\Http\Controllers\Api\Warehouse\LocationController'); // 倉庫庫位
+				$api->resource('products', '\App\Http\Controllers\Api\Warehouse\ProductController'); // 產品
+				$api->resource('suppliers', '\App\Http\Controllers\Api\Warehouse\SupplierController'); // 供应商
 		});
 	});
 // });
