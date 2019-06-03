@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateWarehousesTable extends Migration
+class CreatePurchasesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,19 @@ class CreateWarehousesTable extends Migration
      */
     public function up()
     {
-        Schema::create('warehouses', function (Blueprint $table) {
+        Schema::create('purchases', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->string('slug')->comment('标识');
-            $table->string('title')->comment('标题');
+            $table->string('slug')->comment('标识'); // 采购单号
+            $table->numeric('price_origin')->default(0)->comment('价格-原价');
+            $table->numeric('price')->default(0)->comment('价格-实付');
 
             $table->unsignedTinyInteger('sort')->default(255);
             $table->integer('created_by')->default(0);
             $table->timestamps();
             $table->softDeletes();
 
-            $table->comment = '仓库－仓库';
+            $table->comment = '仓库－采购';
         });
     }
 
@@ -35,6 +36,6 @@ class CreateWarehousesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('warehouses');
+        Schema::dropIfExists('purchases');
     }
 }

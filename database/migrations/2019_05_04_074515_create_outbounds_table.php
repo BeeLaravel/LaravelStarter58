@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOrdersTable extends Migration
+class CreateOutboundsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,20 +13,18 @@ class CreateOrdersTable extends Migration
      */
     public function up()
     {
-        Schema::create('orders', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('outbounds', function (Blueprint $table) {
+            $table->bigIncrements('id');
 
-            $table->string('slug')->comment('标识'); // 订单号
-            $table->unsignedInteger('user_id')->default(0);
-            $table->numeric('price_origin')->default(0)->comment('价格-原价');
-            $table->numeric('price')->default(0)->comment('价格-实付');
+            $table->string('slug')->comment('标识'); // 出库单号
+            $table->string('title')->comment('标题');
 
             $table->unsignedTinyInteger('sort')->default(255);
             $table->integer('created_by')->default(0);
             $table->timestamps();
             $table->softDeletes();
 
-            $table->comment = '仓库－订单';
+            $table->comment = '仓库－出库单';
         });
     }
 
@@ -37,6 +35,6 @@ class CreateOrdersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('orders');
+        Schema::dropIfExists('outbounds');
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateReportsTable extends Migration
+class CreateInboundProductTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,17 @@ class CreateReportsTable extends Migration
      */
     public function up()
     {
-        Schema::create('reports', function (Blueprint $table) {
+        Schema::create('inbound_product', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->unsignedTinyInteger('sort')->default(255);
+            $table->unsignedInteger('inbound_id')->comment('入库单 ID');
+            $table->unsignedInteger('product_id')->comment('产品 ID');
+
             $table->integer('created_by')->default(0);
             $table->timestamps();
             $table->softDeletes();
 
-            $table->comment = '仓库－报表';
+            $table->comment = '仓库－入库单产品';
         });
     }
 
@@ -32,6 +34,6 @@ class CreateReportsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reports');
+        Schema::dropIfExists('inbound_product');
     }
 }

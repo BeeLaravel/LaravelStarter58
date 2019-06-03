@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateProductsTable extends Migration
+class CreateExceptionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,18 @@ class CreateProductsTable extends Migration
      */
     public function up()
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('exceptions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('slug')->comment('标识');
-            $table->string('title')->comment('标题');
+
+            $table->string('slug')->comment('标识'); // 异常单号
+            $table->string('description')->comment('描述');
 
             $table->unsignedTinyInteger('sort')->default(255);
             $table->integer('created_by')->default(0);
             $table->timestamps();
             $table->softDeletes();
 
-            $table->comment = '产品－产品';
+            $table->comment = '仓库－采购异常';
         });
     }
 
@@ -34,6 +35,6 @@ class CreateProductsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('exceptions');
     }
 }
