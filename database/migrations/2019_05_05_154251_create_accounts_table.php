@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePurchasesTable extends Migration
+class CreateAccountsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,19 +13,22 @@ class CreatePurchasesTable extends Migration
      */
     public function up()
     {
-        Schema::create('purchases', function (Blueprint $table) {
+        Schema::create('accounts', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->string('slug')->comment('标识'); // 采购单号
-            $table->decimal('price_origin')->default(0)->comment('价格-原价');
-            $table->decimal('price')->default(0)->comment('价格-实付');
+            $table->string('title')->comment('标题');
+            $table->string('url')->comment('URL');
+            $table->string('account')->comment('账户');
+            $table->string('password')->comment('密码');
+            $table->text('descripion')->comment('描述');
+
+            $table->unsignedInteger('category_id')->comment('分类');
+            $table->unsignedInteger('type_id')->comment('类型');
 
             $table->unsignedTinyInteger('sort')->default(255);
             $table->integer('created_by')->default(0);
             $table->timestamps();
             $table->softDeletes();
-
-            $table->comment = '仓库－采购';
         });
     }
 
@@ -36,6 +39,6 @@ class CreatePurchasesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('purchases');
+        Schema::dropIfExists('accounts');
     }
 }

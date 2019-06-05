@@ -3,18 +3,19 @@ namespace App\Http\Controllers\Api\Warehouse;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests\Warehouse\OrderRequest as ThisRequest;
-use App\Models\Warehouse\Order as ThisModel;
-use App\Transformers\Warehouse\OrderTransformer as ThisTransformer;
+use App\Http\Requests\Warehouse\FeeRequest as ThisRequest;
+use App\Models\Warehouse\Fee as ThisModel;
+use App\Transformers\Warehouse\FeeTransformer as ThisTransformer;
 
-class OrderController extends Controller { // 订单
+class FeeController extends Controller { // 消费
     public function index(Request $request, $parent_id=0) {
         $order_column = $request->query('order_column', 'sort');
         $order_direction = $request->query('order_direction', 'asc');
         $page = $request->query('page', 1);
         $per_page = $request->query('per_page', 20);
         $filter = $request->query('filter', "");
-        $font_id = $request->query('font_id', "");
+        $language = $request->query('language', "");
+        $category = $request->query('category', "");
 
         $items = new ThisModel;
 
@@ -22,9 +23,11 @@ class OrderController extends Controller { // 订单
             $filter = '%'.$filter.'%';
 
             return $query->where('title', 'like', $filter)
-                ->orWhere('content', 'like', $filter);
+                ->orWhere('description', 'like', $filter)
+                ->orWhere('slug', 'like', $filter);
         });
-        if ( $font_id ) $items = $items->where('font_id', $font_id);
+        if ( $language ) $items = $items->where('language', $language);
+        if ( $category ) $items = $items->where('category', $category);
   
         $items = $items
             ->orderBy($order_column, $order_direction)
@@ -53,7 +56,6 @@ class OrderController extends Controller { // 订单
     }
     public function destroy($id) {
         $item = ThisModel::findOrFail($id);
-
         $result = $item->delete();
 
         return [
@@ -61,4 +63,3 @@ class OrderController extends Controller { // 订单
         ];
     }
 }
-

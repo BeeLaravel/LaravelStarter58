@@ -1,20 +1,20 @@
 <?php
-namespace App\Http\Controllers\Api\Warehouse;
+namespace App\Http\Controllers\Api\Basic;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests\Warehouse\OrderRequest as ThisRequest;
-use App\Models\Warehouse\Order as ThisModel;
-use App\Transformers\Warehouse\OrderTransformer as ThisTransformer;
+use App\Http\Requests\Basic\LanguageRequest as ThisRequest;
+use App\Models\Basic\Language as ThisModel;
+use App\Transformers\Basic\LanguageTransformer as ThisTransformer;
 
-class OrderController extends Controller { // 订单
+class LanguageController extends Controller { // 包管理
     public function index(Request $request, $parent_id=0) {
         $order_column = $request->query('order_column', 'sort');
         $order_direction = $request->query('order_direction', 'asc');
         $page = $request->query('page', 1);
         $per_page = $request->query('per_page', 20);
         $filter = $request->query('filter', "");
-        $font_id = $request->query('font_id', "");
+        $area_id = $request->query('area_id', "");
 
         $items = new ThisModel;
 
@@ -22,9 +22,10 @@ class OrderController extends Controller { // 订单
             $filter = '%'.$filter.'%';
 
             return $query->where('title', 'like', $filter)
-                ->orWhere('content', 'like', $filter);
+                ->orWhere('description', 'like', $filter)
+                ->orWhere('slug', 'like', $filter);
         });
-        if ( $font_id ) $items = $items->where('font_id', $font_id);
+        if ( $area_id ) $items = $items->where('area_id', $area_id);
   
         $items = $items
             ->orderBy($order_column, $order_direction)
@@ -53,7 +54,6 @@ class OrderController extends Controller { // 订单
     }
     public function destroy($id) {
         $item = ThisModel::findOrFail($id);
-
         $result = $item->delete();
 
         return [
@@ -61,4 +61,3 @@ class OrderController extends Controller { // 订单
         ];
     }
 }
-

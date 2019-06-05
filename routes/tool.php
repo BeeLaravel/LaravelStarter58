@@ -8,6 +8,7 @@ Route::group([
 	$router->get('/fonts', 'IndexController@fonts')->name('fonts'); // fonts
 	$router->get('/custom_fonts', 'IndexController@custom_fonts')->name('custom_fonts'); // custom_fonts
 	$router->get('/svgs', 'IndexController@svgs')->name('svgs'); // svgs
+	$router->get('/accounts', 'IndexController@accounts')->name('accounts'); // accounts
 });
 // php
 Route::get('php/info', 'PHPController@info')->name('tool.php.info');
