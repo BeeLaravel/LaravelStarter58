@@ -70,6 +70,10 @@ $api = app('Dingo\Api\Routing\Router');
 			$api->resource('orders', '\App\Http\Controllers\Api\Warehouse\OrderController'); // 订单
 			$api->resource('costs', '\App\Http\Controllers\Api\Warehouse\CostController'); // 消费
 			$api->resource('fees', '\App\Http\Controllers\Api\Warehouse\FeeController'); // 费用
+			$api->resource('reports', '\App\Http\Controllers\Api\Warehouse\ReportController'); // 报表
+			$api->resource('exceptions', '\App\Http\Controllers\Api\Warehouse\ExceptionController'); // 异常
+			$api->resource('inbounds', '\App\Http\Controllers\Api\Warehouse\InboundController'); // 入库
+			$api->resource('outbounds', '\App\Http\Controllers\Api\Warehouse\OutboundController'); // 出库
 		});
 	});
 // });
