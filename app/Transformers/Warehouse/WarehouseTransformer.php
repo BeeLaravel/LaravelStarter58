@@ -19,7 +19,7 @@ class WarehouseTransformer extends TransformerAbstract {
 
             'sort' => $item->sort,
             // 'created_by' => $item->created_by,
-            // 'created_at' => $item->created_at,
+            'created_at' => $item->created_at->diffForHumans(),
             // 'updated_at' => $item->updated_at,
             // 'deleted_at' => $item->deleted_at,
         ];

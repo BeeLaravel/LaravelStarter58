@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "add2558a677ee4195e030d7662b7cd63",
+    "content-hash": "8ecf0b2f122b52a21b89130c33fc06a9",
     "packages": [
         {
             "name": "activecollab/etcd",
@@ -691,6 +691,111 @@
                 "zip"
             ],
             "time": "2017-07-17T08:05:10+00:00"
+        },
+        {
+            "name": "ck/file_marc_reference",
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MARCspec/File_MARC_Reference.git",
+                "reference": "29abbff5bec5e3bcfeeb07ba7bee94cc0a0a7f5e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MARCspec/File_MARC_Reference/zipball/29abbff5bec5e3bcfeeb07ba7bee94cc0a0a7f5e",
+                "reference": "29abbff5bec5e3bcfeeb07ba7bee94cc0a0a7f5e",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "ck/php-marcspec": "^2.0",
+                "pear/file_marc": "@dev",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7 | ^6"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Carsten Klee",
+                    "homepage": "http://collidoscope.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "MARCspec adapter for File_MARC",
+            "keywords": [
+                "File_MARC",
+                "MARC 21",
+                "MARCspec"
+            ],
+            "time": "2017-12-01T09:16:45+00:00"
+        },
+        {
+            "name": "ck/php-marcspec",
+            "version": "2.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/MARCspec/php-marc-spec.git",
+                "reference": "853d77ad3d510ce05c33535bfa3f1068dccdeef6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/MARCspec/php-marc-spec/zipball/853d77ad3d510ce05c33535bfa3f1068dccdeef6",
+                "reference": "853d77ad3d510ce05c33535bfa3f1068dccdeef6",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "ck/marcspec-test-suite": "@dev",
+                "phpunit/phpunit": "^5.7 | ^6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "CK\\MARCspec\\": "src/",
+                    "CK\\MARCspec\\Exception\\": "src/Exception/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Carsten Klee",
+                    "homepage": "http://collidoscope.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP based MARCspec parser and validator",
+            "keywords": [
+                "MARC 21",
+                "MARCspec"
+            ],
+            "time": "2017-12-12T08:18:18+00:00"
         },
         {
             "name": "cmgmyr/messenger",
@@ -3737,6 +3842,120 @@
             "time": "2018-07-02T15:55:56+00:00"
         },
         {
+            "name": "pear/file_marc",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pear/File_MARC.git",
+                "reference": "84b7f633c9261245bf6b16d7fbe87fe503551c9a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pear/File_MARC/zipball/84b7f633c9261245bf6b16d7fbe87fe503551c9a",
+                "reference": "84b7f633c9261245bf6b16d7fbe87fe503551c9a",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "pear/pear_exception": "1.*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "suggest": {
+                "pear/validate_ispn": "Install optionally via your project's composer.json"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "File": "./"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                "./"
+            ],
+            "license": [
+                "LGPL-2.1"
+            ],
+            "authors": [
+                {
+                    "name": "Dan Scott",
+                    "email": "dbs@php.net",
+                    "homepage": "https://coffeecode.net",
+                    "role": "Lead"
+                }
+            ],
+            "description": "Supports the MAchine Readable Cataloging (MARC) file format documented at http://loc.gov/marc/",
+            "time": "2017-12-04T10:30:19+00:00"
+        },
+        {
+            "name": "pear/pear_exception",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pear/PEAR_Exception.git",
+                "reference": "8c18719fdae000b690e3912be401c76e406dd13b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pear/PEAR_Exception/zipball/8c18719fdae000b690e3912be401c76e406dd13b",
+                "reference": "8c18719fdae000b690e3912be401c76e406dd13b",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=4.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*"
+            },
+            "type": "class",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "PEAR": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "include-path": [
+                "."
+            ],
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Helgi Thormar",
+                    "email": "dufuz@php.net"
+                },
+                {
+                    "name": "Greg Beaver",
+                    "email": "cellog@php.net"
+                }
+            ],
+            "description": "The PEAR Exception base class.",
+            "homepage": "https://github.com/pear/PEAR_Exception",
+            "keywords": [
+                "exception"
+            ],
+            "time": "2015-02-10T20:07:52+00:00"
+        },
+        {
             "name": "phenx/php-font-lib",
             "version": "0.5.1",
             "source": {
@@ -4711,6 +4930,58 @@
                 "testing"
             ],
             "time": "2019-05-08T21:50:43+00:00"
+        },
+        {
+            "name": "scriptotek/marc",
+            "version": "v2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/scriptotek/php-marc.git",
+                "reference": "558b2682df801125a32d79d9a6eb409f5f6ce362"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/scriptotek/php-marc/zipball/558b2682df801125a32d79d9a6eb409f5f6ce362",
+                "reference": "558b2682df801125a32d79d9a6eb409f5f6ce362",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://dl.laravel-china.org/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "ck/file_marc_reference": "^1.2",
+                "pear/file_marc": "^1.1",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7 | ^6.0 | ^7.0",
+                "squizlabs/php_codesniffer": "^3.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Scriptotek\\Marc\\": "src/",
+                    "Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dan Michael O. Heggø",
+                    "email": "d.m.heggo@ub.uio.no"
+                }
+            ],
+            "description": "Simple interface to parsing MARC records using File_MARC",
+            "keywords": [
+                "marc"
+            ],
+            "time": "2019-01-09T22:33:34+00:00"
         },
         {
             "name": "simplesoftwareio/simple-qrcode",
