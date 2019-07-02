@@ -25,3 +25,11 @@
 093. Laravel 语言包 —— overtrue/laravel-lang （caouecs/laravel-lang） 1周前 02:40
 094. 快速查看日志文件——spatie/laravel-tail 免费 5天前 04:54
 095. 快速制作一份 Laravel 模型的副本——Eloquent Cloner
+
+use package;
+db.test.find();
+db.test.drop();
+show collections;
+
+use admin;
+db.createUser({user:'homestead',pwd:'secret',roles:['root']})
