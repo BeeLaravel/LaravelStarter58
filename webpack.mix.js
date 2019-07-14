@@ -16,3 +16,6 @@ mix.js('resources/js/app.js', 'public/js')
 
 mix.js('resources/js/tool.js', 'public/scripts')
    .sass('resources/sass/tool.scss', 'public/styles');
+
+mix.js('resources/js/warehouse.js', 'public/scripts')
+   .sass('resources/sass/warehouse.scss', 'public/styles');

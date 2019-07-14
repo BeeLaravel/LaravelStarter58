@@ -2,5 +2,7 @@
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/styles/tool.css": "/styles/tool.css",
-    "/scripts/tool.js": "/scripts/tool.js"
+    "/styles/warehouse.css": "/styles/warehouse.css",
+    "/scripts/tool.js": "/scripts/tool.js",
+    "/scripts/warehouse.js": "/scripts/warehouse.js"
 }
