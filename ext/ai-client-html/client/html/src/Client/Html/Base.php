@@ -599,7 +599,7 @@ abstract class Base
 			return null;
 		}
 
-		$cfg = $config->get( 'client/html', [] );
+		$cfg = array_merge( $config->get( 'client/html', [] ), $this->getSubClientNames() );
 
 		$keys = array(
 			'body' => $this->getParamHash( $prefixes, $uid . ':' . $confkey . ':body', $cfg ),
@@ -631,14 +631,15 @@ abstract class Base
 		$config = $context->getConfig();
 
 		$force = $config->get( 'client/html/common/cache/force', false );
+		$enable = $config->get( $confkey . '/cache', true );
 
-		if( $force == false && $context->getUserId() !== null ) {
+		if( $enable == false || $force == false && $context->getUserId() !== null ) {
 			return;
 		}
 
 		try
 		{
-			$cfg = $config->get( 'client/html', [] );
+			$cfg = array_merge( $config->get( 'client/html', [] ), $this->getSubClientNames() );
 			$key = $this->getParamHash( $prefixes, $uid . ':' . $confkey . ':' . $type, $cfg );
 
 			$context->getCache()->set( $key, $value, $expire, array_unique( $tags ) );
@@ -706,8 +707,8 @@ abstract class Base
 		{
 			foreach( $list as $object => $errcode )
 			{
-				$key = $scope . ( $scope !== 'product' ? '.' . $object : '' ) . '.' . $errcode;
-				$errors[] = $i18n->dt( 'mshop/code', $key );
+				$key = $scope . ( !in_array( $scope, ['coupon', 'product'] ) ? '.' . $object : '' ) . '.' . $errcode;
+				$errors[] = sprintf( $i18n->dt( 'mshop/code', $key ), $object );
 			}
 		}
 

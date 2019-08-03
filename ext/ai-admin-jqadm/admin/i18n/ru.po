@@ -4,13 +4,14 @@
 # 
 # Translators:
 # Roman Krutovoy <serveri.minecraft@gmail.com>, 2018
+# Yakov Vladimirov <yakov_255@mail.ru>, 2019
 # Андрей Аксёнов <aksenovaa@bk.ru>, 2014-2015
 msgid ""
 msgstr ""
 "Project-Id-Version: aimeos-core\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-14 09:41+0200\n"
-"PO-Revision-Date: 2018-10-14 07:41+0000\n"
+"POT-Creation-Date: 2019-03-13 10:02+0100\n"
+"PO-Revision-Date: 2019-03-13 09:09+0000\n"
 "Last-Translator: Aimeos\n"
 "Language-Team: Russian (http://www.transifex.com/aimeos/aimeos-core/language/ru/)\n"
 "MIME-Version: 1.0\n"
@@ -159,7 +160,7 @@ msgid ""
 msgstr ""
 
 msgid "Allow custom price"
-msgstr ""
+msgstr "Разрешить пользовательскую цену"
 
 msgid "Allow customers to choose themselves how much they want to pay"
 msgstr ""
@@ -251,7 +252,7 @@ msgid "Available attributes"
 msgstr "Доступные атрибуты"
 
 msgid "Available currency for the current site"
-msgstr ""
+msgstr "Валюта доступная на текущем сайта"
 
 msgid "Available customer groups"
 msgstr "Доступные группы пользователей"
@@ -302,13 +303,13 @@ msgid "Birthday"
 msgstr "День рождения"
 
 msgid "Birthday of the customer"
-msgstr ""
+msgstr "День рождения покупателя"
 
 msgid "Bug or suggestion?"
 msgstr ""
 
 msgid "Bundles"
-msgstr ""
+msgstr "Наборы"
 
 msgid "Cache"
 msgstr "Кеш"
@@ -642,7 +643,7 @@ msgid "Descritive name of the site"
 msgstr ""
 
 msgid "Details"
-msgstr "Подробно"
+msgstr "Информация"
 
 msgid "Display field is empty"
 msgstr "Поле не заполнено"
@@ -1319,10 +1320,10 @@ msgid "Orders"
 msgstr ""
 
 msgid "Orders by day"
-msgstr ""
+msgstr "Заказы по дням"
 
 msgid "Orders by hour"
-msgstr ""
+msgstr "Заказы по часам"
 
 msgid "Orders by payment status"
 msgstr ""
@@ -1835,7 +1836,7 @@ msgid "Service position (required)"
 msgstr ""
 
 msgid "Service price"
-msgstr ""
+msgstr "Стоймость обслуживания"
 
 msgid "Service provider or service decorator configuration name"
 msgstr ""
@@ -1857,13 +1858,13 @@ msgid "Service: {0} ({1})"
 msgstr "Служба: {0} ({1})"
 
 msgid "Services"
-msgstr "Службы"
+msgstr "Оплата и доставка"
 
 msgid "Ship date"
-msgstr ""
+msgstr "Дата доставки"
 
 msgid "Ship status"
-msgstr ""
+msgstr "Статус доставки"
 
 msgid "Shipping"
 msgstr "Перевозка"
@@ -2253,13 +2254,13 @@ msgid "Upload successful"
 msgstr "Загрузка закончена"
 
 msgid "Uploaded"
-msgstr ""
+msgstr "Загружено"
 
 msgid "Used by"
 msgstr "Используется в"
 
 msgid "User groups"
-msgstr ""
+msgstr "Группы пользователей"
 
 msgid "User name"
 msgstr "Имя пользователя"
@@ -2301,10 +2302,10 @@ msgid "View details"
 msgstr ""
 
 msgid "Voucher"
-msgstr ""
+msgstr "Купон"
 
 msgid "Vouchers"
-msgstr ""
+msgstr "Купоны"
 
 msgid "Warehouse"
 msgstr "Склад"
@@ -2328,7 +2329,7 @@ msgid "Web site"
 msgstr "Сайт"
 
 msgid "Web site URL (optional)"
-msgstr ""
+msgstr "URL сайта (необязательно)"
 
 msgid "Web site, e.g. www.example.com"
 msgstr "Сайт, например www.example.com"
@@ -2366,7 +2367,7 @@ msgid "Zip code"
 msgstr "Индекс"
 
 msgid "Zip code (optional)"
-msgstr ""
+msgstr "Почтовый код (необязательно)"
 
 #, php-format
 msgid "address"
@@ -2384,7 +2385,7 @@ msgstr "Атрибуты"
 
 #, php-format
 msgid "bundle"
-msgstr ""
+msgstr "Наборы"
 
 #, php-format
 msgid "catalog"
@@ -2419,7 +2420,7 @@ msgstr ""
 
 #, php-format
 msgid "coupon"
-msgstr ""
+msgstr "Купоны"
 
 #, php-format
 msgid "customer"

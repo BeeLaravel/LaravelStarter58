@@ -66660,7 +66660,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! B:\PHP\Laravel5\starter\LaravelStarter58\resources\js\tool.js */"./resources/js/tool.js");
+module.exports = __webpack_require__(/*! /data/php/laravel5/starter/LaravelStarter58/resources/js/tool.js */"./resources/js/tool.js");
 
 
 /***/ })
