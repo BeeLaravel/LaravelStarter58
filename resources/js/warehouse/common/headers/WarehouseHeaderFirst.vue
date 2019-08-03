@@ -173,6 +173,7 @@
 </template>
 <style lang="scss" scoped>
     .header_first {
+        position: relative;
         display: flex;
         justify-content: space-between;
         height: 32px;

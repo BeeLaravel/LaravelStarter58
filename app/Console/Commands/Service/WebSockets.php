@@ -10,10 +10,12 @@ class WebSockets extends Command {
     }
 
     public function handle() {
-        $server = new \swoole_websocket_server("0.0.0.0", env('WEBSOCKET_PORT'), SWOOLE_PROCESS, SWOOLE_SOCK_TCP | SWOOLE_SSL);
+        $server = new \swoole_websocket_server("0.0.0.0", config('beesoft.websockets.port'), SWOOLE_PROCESS, SWOOLE_SOCK_TCP | SWOOLE_SSL);
         $server->set(array(
             'ssl_cert_file' => '/etc/httpd/cert/2_102.beesoft.ink.crt',
-            'ssl_key_file' => '/etc/httpd/cert/3_102.beesoft.ink.key', // 'worker_num' => 4, // 进程数 // 'daemonize' => 1, // 守护进程
+            'ssl_key_file' => '/etc/httpd/cert/3_102.beesoft.ink.key',
+            // 'worker_num' => 4, // 进程数
+            // 'daemonize' => 1, // 守护进程
             'log_file' => storage_path('logs/swoole_wss.log'), // 日志文件
         ));
         $server->on('open', function($server, $req) {
