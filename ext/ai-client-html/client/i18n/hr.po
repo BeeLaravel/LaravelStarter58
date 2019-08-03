@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aimeos-core\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-27 08:31+0200\n"
-"PO-Revision-Date: 2018-09-27 06:36+0000\n"
+"POT-Creation-Date: 2019-03-13 10:02+0100\n"
+"PO-Revision-Date: 2019-03-13 09:09+0000\n"
 "Last-Translator: Aimeos\n"
 "Language-Team: Croatian (http://www.transifex.com/aimeos/aimeos-core/language/hr/)\n"
 "MIME-Version: 1.0\n"
@@ -157,7 +157,7 @@ msgid "At least one delivery address part is missing or invalid"
 msgstr ""
 
 msgid "Attributes"
-msgstr ""
+msgstr "Atributi"
 
 msgid "Back"
 msgstr "Nazad"
@@ -195,7 +195,7 @@ msgid "Change payment"
 msgstr ""
 
 msgid "Characteristics"
-msgstr ""
+msgstr "Karakteristike"
 
 msgid "Check"
 msgstr ""
@@ -270,6 +270,10 @@ msgstr "Isporuka"
 
 msgid "Delivery address"
 msgstr "Adresa za isporuku"
+
+#, php-format
+msgid "Delivery address deleted successfully"
+msgstr ""
 
 #, php-format
 msgid "Delivery address part \"%1$s\" is invalid"
@@ -396,7 +400,7 @@ msgid "Last seen"
 msgstr ""
 
 msgid "Latest"
-msgstr ""
+msgstr "Poslijednje"
 
 msgid "Like entered by you"
 msgstr ""
@@ -426,7 +430,7 @@ msgstr ""
 
 #, php-format
 msgid "No type item for \"%1$s/%2$s\" in \"%3$s\" found"
-msgstr ""
+msgstr "Nijedna stavka vrste \"%1$s/%2$s\" nije pronađena u \"%3$s\""
 
 #, php-format
 msgid "No view available"
@@ -453,7 +457,7 @@ msgid "Options"
 msgstr ""
 
 msgid "Order ID"
-msgstr ""
+msgstr "ID narudžbe"
 
 msgid "Order channel"
 msgstr ""
@@ -526,13 +530,13 @@ msgid "Please recheck your payment choice"
 msgstr ""
 
 msgid "Please select"
-msgstr ""
+msgstr "Odaberite"
 
 msgid "Postal code"
 msgstr "Poštanski broj"
 
 msgid "Previous"
-msgstr ""
+msgstr "Prethodno"
 
 msgid "Price"
 msgstr "Cijena"
@@ -556,7 +560,7 @@ msgid "Qty"
 msgstr ""
 
 msgid "Quantity"
-msgstr ""
+msgstr "Količina"
 
 msgid "Related"
 msgstr ""
@@ -609,10 +613,10 @@ msgid "Share"
 msgstr ""
 
 msgid "Shipping"
-msgstr ""
+msgstr "Dostava"
 
 msgid "Show"
-msgstr ""
+msgstr "Prikaži"
 
 msgid "Show all quotes"
 msgstr ""
@@ -951,7 +955,7 @@ msgstr ""
 
 #, php-format
 msgid "payment"
-msgstr ""
+msgstr "plaćanje"
 
 #, php-format
 msgid "process"

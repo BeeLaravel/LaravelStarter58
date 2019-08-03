@@ -8,10 +8,37 @@ class ApplicationRequest extends FormRequest {
         return true;
     }
     public function rules() {
-        return [
-            'title' => 'required|max:50',
-            'slug' => 'required|unique:applications|max:50',
-        ];
+        switch ( $this->method() ) {
+            case 'POST':
+                $return = [
+                    'title' => 'required|max:50',
+                    'slug' => [
+                        'required',
+                        'max:50',
+                        'unique:applications',
+                    ],
+                ];
+            break;
+            case 'PUT':
+            case 'PATCH':
+                $return = [
+                    'title' => 'max:50',
+                    'slug' => [
+                        'required',
+                        'max:50',
+                        Rule::unique('applications')->where(function ($query) {
+                        	return $query;
+                        })->ignore($this->route('application')),
+                    ],
+                ];
+            break;
+            default:
+                $return = [];
+        }
+
+        // $return = array_merge($return, [
+        // ]);
+
+        return $return;
     }
 }
-

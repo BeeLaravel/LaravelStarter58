@@ -4,15 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Aimeos, 2017
+# Aimeos, 2018
 # Nicolas Lapointe (ComradeNixco) <nixcocpp@gmail.com>, 2018
+# Doryan R, 2019
+# 
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: aimeos\n"
+"Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-27 08:31+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Nicolas Lapointe (ComradeNixco) <nixcocpp@gmail.com>, 2018\n"
+"POT-Creation-Date: 2019-03-13 10:02+0100\n"
+"PO-Revision-Date: 2017-02-28 11:36+0000\n"
+"Last-Translator: Doryan R, 2019\n"
 "Language-Team: French (https://www.transifex.com/aimeos/teams/39015/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,10 +25,10 @@ msgstr ""
 
 #: src/Client/JsonApi/Basket/Address/Standard.php:141
 #: src/Client/JsonApi/Basket/Address/Standard.php:135
-#: src/Client/JsonApi/Basket/Address/Standard.php:135
+#: src/Client/JsonApi/Basket/Address/Standard.php:141
 #, php-format
 msgid "Address type or attributes are missing"
-msgstr ""
+msgstr "Le type d'adresse ou les attributs sont manquants"
 
 #: src/Client/JsonApi/Customer/Address/Standard.php:233
 #: src/Client/JsonApi/Customer/Relationships/Standard.php:238
@@ -35,7 +38,7 @@ msgstr ""
 #: src/Client/JsonApi/Customer/Relationships/Standard.php:228
 #, php-format
 msgid "Attributes are missing"
-msgstr ""
+msgstr "Les attributs sont manquants"
 
 #: src/Client/JsonApi/Common/Factory/Base.php:147
 #: src/Client/JsonApi/Common/Factory/Base.php:180
@@ -63,10 +66,10 @@ msgstr "Classe \"%1$s\" non trouvée"
 
 #: src/Client/JsonApi/Basket/Coupon/Standard.php:141
 #: src/Client/JsonApi/Basket/Coupon/Standard.php:135
-#: src/Client/JsonApi/Basket/Coupon/Standard.php:135
+#: src/Client/JsonApi/Basket/Coupon/Standard.php:141
 #, php-format
 msgid "Coupon code is missing"
-msgstr ""
+msgstr "Le code de coupon est manquant"
 
 #: src/Client/JsonApi/Customer/Address/Standard.php:77
 #: src/Client/JsonApi/Customer/Relationships/Standard.php:77
@@ -76,7 +79,7 @@ msgstr ""
 #: src/Client/JsonApi/Customer/Relationships/Standard.php:73
 #, php-format
 msgid "ID is missing"
-msgstr ""
+msgstr "ID manquant"
 
 #: src/Client/JsonApi/Order/Standard.php:99
 #: src/Client/JsonApi/Customer/Address/Standard.php:67
@@ -118,15 +121,15 @@ msgstr ""
 #: src/Client/JsonApi/Basket/Standard.php:137
 #: src/Client/JsonApi/Order/Standard.php:95
 #: src/Client/JsonApi/Basket/Address/Standard.php:66
-#: src/Client/JsonApi/Basket/Address/Standard.php:125
-#: src/Client/JsonApi/Basket/Standard.php:137
+#: src/Client/JsonApi/Basket/Address/Standard.php:131
+#: src/Client/JsonApi/Basket/Standard.php:143
 #: src/Client/JsonApi/Basket/Service/Standard.php:66
-#: src/Client/JsonApi/Basket/Service/Standard.php:125
+#: src/Client/JsonApi/Basket/Service/Standard.php:131
 #: src/Client/JsonApi/Basket/Product/Standard.php:66
-#: src/Client/JsonApi/Basket/Product/Standard.php:126
-#: src/Client/JsonApi/Basket/Product/Standard.php:186
+#: src/Client/JsonApi/Basket/Product/Standard.php:132
+#: src/Client/JsonApi/Basket/Product/Standard.php:198
 #: src/Client/JsonApi/Basket/Coupon/Standard.php:66
-#: src/Client/JsonApi/Basket/Coupon/Standard.php:125
+#: src/Client/JsonApi/Basket/Coupon/Standard.php:131
 #: src/Client/JsonApi/Customer/Address/Standard.php:63
 #: src/Client/JsonApi/Customer/Address/Standard.php:171
 #: src/Client/JsonApi/Customer/Address/Standard.php:217
@@ -255,7 +258,7 @@ msgstr "Nom de classe \"%1$s\" non valide"
 #: src/Client/JsonApi/Subscription/Factory.php:38
 #, php-format
 msgid "Invalid client \"%1$s\""
-msgstr ""
+msgstr "Client invalide \"%1$s\""
 
 #: src/Client/JsonApi/Factory.php:121 src/Client/JsonApi/Factory.php:117
 #: src/Client/JsonApi/Factory.php:117
@@ -274,7 +277,7 @@ msgstr "Usine invalide \"%1$s\""
 #: src/Client/JsonApi/Order/Standard.php:201
 #, php-format
 msgid "No basket for the \"order.baseid\" (\"%1$s\") found"
-msgstr ""
+msgstr "Aucun panier pour le \"order.baseid\" (\"%1$s\") trouvé"
 
 #: src/Client/JsonApi/Base.php:142 src/Client/JsonApi/Base.php:142
 #, php-format
@@ -286,45 +289,45 @@ msgstr "Pas de visuel disponible"
 #: src/Client/JsonApi/Basket/Product/Standard.php:76
 #: src/Client/JsonApi/Basket/Product/Standard.php:140
 #: src/Client/JsonApi/Basket/Product/Standard.php:76
-#: src/Client/JsonApi/Basket/Product/Standard.php:140
+#: src/Client/JsonApi/Basket/Product/Standard.php:146
 #, php-format
 msgid "Position (ID) is missing"
-msgstr ""
+msgstr "La position (ID) est manquante"
 
 #: src/Client/JsonApi/Basket/Product/Standard.php:204
 #: src/Client/JsonApi/Basket/Product/Standard.php:196
-#: src/Client/JsonApi/Basket/Product/Standard.php:196
+#: src/Client/JsonApi/Basket/Product/Standard.php:208
 #, php-format
 msgid "Product ID is missing"
-msgstr ""
+msgstr "Le produit est manquant"
 
 #: src/Client/JsonApi/Order/Standard.php:103
 #: src/Client/JsonApi/Order/Standard.php:99
 #: src/Client/JsonApi/Order/Standard.php:99
 #, php-format
 msgid "Required attribute \"order.baseid\" is missing"
-msgstr ""
+msgstr "L'attribut requis \"order.baseid\" est manquant."
 
 #: src/Client/JsonApi/Basket/Service/Standard.php:149
 #: src/Client/JsonApi/Basket/Service/Standard.php:143
-#: src/Client/JsonApi/Basket/Service/Standard.php:143
+#: src/Client/JsonApi/Basket/Service/Standard.php:149
 #, php-format
 msgid "Service ID in attributes is missing"
-msgstr ""
+msgstr "L'ID de service dans les attributs est manquant"
 
 #: src/Client/JsonApi/Basket/Service/Standard.php:145
 #: src/Client/JsonApi/Basket/Service/Standard.php:139
-#: src/Client/JsonApi/Basket/Service/Standard.php:139
+#: src/Client/JsonApi/Basket/Service/Standard.php:145
 #, php-format
 msgid "Service attributes are missing"
-msgstr ""
+msgstr "Les attributs de service sont manquants"
 
 #: src/Client/JsonApi/Basket/Service/Standard.php:141
 #: src/Client/JsonApi/Basket/Service/Standard.php:135
-#: src/Client/JsonApi/Basket/Service/Standard.php:135
+#: src/Client/JsonApi/Basket/Service/Standard.php:141
 #, php-format
 msgid "Service type (ID) is missing"
-msgstr ""
+msgstr "Le type de service (ID) est manquant"
 
 #: src/Client/JsonApi/Basket/Coupon/Standard.php:80
 #: src/Client/JsonApi/Basket/Service/Standard.php:80
@@ -337,7 +340,7 @@ msgstr ""
 #: src/Client/JsonApi/Basket/Coupon/Standard.php:76
 #, php-format
 msgid "Type (ID) is missing"
-msgstr ""
+msgstr "Le type (ID) est manquant"
 
 #: src/Client/JsonApi/Base.php:57 src/Client/JsonApi/Base.php:52
 #: src/Client/JsonApi/Base.php:52

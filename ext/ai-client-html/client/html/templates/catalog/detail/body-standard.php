@@ -68,25 +68,28 @@ if( isset( $this->detailProductItem ) )
 	$propItems = $this->detailProductItem->getPropertyItems();
 	$posItems = $this->detailProductItem->getRefItems( 'product', null, 'default' );
 
-	foreach( $getProductList( $posItems, $prodItems ) as $subProdId => $subProduct )
+	if( in_array( $this->detailProductItem->getType(), ['bundle', 'select'] ) )
 	{
-		$subItems = $subProduct->getRefItems( 'attribute', null, 'default' );
-		$subItems += $subProduct->getRefItems( 'attribute', null, 'variant' ); // show product variant attributes as well
-		$mediaItems = array_merge( $mediaItems, $subProduct->getRefItems( 'media', 'default', 'default' ) );
-
-		foreach( $subItems as $attrId => $attrItem )
+		foreach( $getProductList( $posItems, $prodItems ) as $subProdId => $subProduct )
 		{
-			$attrMap[ $attrItem->getType() ][ $attrId ] = $attrItem;
-			$subAttrDeps[ $attrId ][] = $subProdId;
-		}
+			$subItems = $subProduct->getRefItems( 'attribute', null, 'default' );
+			$subItems += $subProduct->getRefItems( 'attribute', null, 'variant' ); // show product variant attributes as well
+			$mediaItems = array_merge( $mediaItems, $subProduct->getRefItems( 'media', 'default', 'default' ) );
 
-		$propItems = array_merge( $propItems, $subProduct->getPropertyItems() );
+			foreach( $subItems as $attrId => $attrItem )
+			{
+				$attrMap[ $attrItem->getType() ][ $attrId ] = $attrItem;
+				$subAttrDeps[ $attrId ][] = $subProdId;
+			}
+
+			$propItems = array_merge( $propItems, $subProduct->getPropertyItems() );
+		}
 	}
 
-	foreach( $propItems as $propId => $propItem )
+	foreach( $propItems as $propItem )
 	{
-		$propMap[ $propItem->getType() ][ $propId ] = $propItem;
-		$subPropDeps[ $propId ][] = $propItem->getParentId();
+		$propMap[$propItem->getType()][$propItem->getId()] = $propItem;
+		$subPropDeps[$propItem->getId()] = $propItem->getParentId();
 	}
 }
 
@@ -454,13 +457,8 @@ if( isset( $this->detailProductItem ) )
 										<?php foreach( $propMap as $type => $propItems ) : ?>
 											<?php foreach( $propItems as $propertyItem ) : $classes = ''; ?>
 												<?php
-													if( $propertyItem->getParentId() != $this->detailProductItem->getId()
-														&& isset( $subPropDeps[ $propertyItem->getId() ] )
-													) {
-														$classes .= ' subproduct';
-														foreach( $subPropDeps[ $propertyItem->getId() ] as $prodid ) {
-															$classes .= ' subproduct-' . $prodid;
-														}
+													if( isset( $subPropDeps[$propertyItem->getId()] ) ) {
+														$classes .= ' subproduct subproduct-' . $subPropDeps[$propertyItem->getId()];
 													}
 												?>
 												<tr class="item<?= $classes; ?>">

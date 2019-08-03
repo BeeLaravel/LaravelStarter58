@@ -103,8 +103,7 @@ $params = $this->param();
 		<h2><?= $enc->html( $this->translate( 'client', 'Attributes' ), $enc::TRUST ); ?></h2>
 
 
-		<?php if( !empty( $attrIds ) || !empty( $optIds ) ) : ?>
-
+		<?php if( !empty( $attrIds ) || !empty( $optIds ) || !empty( $oneIds ) ) : ?>
 			<div class="attribute-selected">
 				<span class="selected-intro"><?= $enc->html( $this->translate( 'client', 'Your choice' ), $enc::TRUST ); ?></span>
 
@@ -163,13 +162,11 @@ $params = $this->param();
 									<label class="attr-name" for="attr-<?= $enc->attr( $id ); ?>"><!--
 										--><div class="media-list"><!--
 
-											<?php foreach( $attribute->getListItems( 'media', 'icon' ) as $listItem ) : ?>
-												<?php if( ( $item = $listItem->getRefItem() ) !== null ) : ?>
-													<?= '-->' . $this->partial(
-														$this->config( 'client/html/common/partials/media', 'common/partials/media-standard.php' ),
-														array( 'item' => $item, 'boxAttributes' => array( 'class' => 'media-item' ) )
-													) . '<!--'; ?>
-												<?php endif; ?>
+											<?php foreach( $attribute->getRefItems( 'media', 'icon', 'default' ) as $mediaItem ) : ?>
+												<?= '-->' . $this->partial(
+													$this->config( 'client/html/common/partials/media', 'common/partials/media-standard.php' ),
+													array( 'item' => $mediaItem, 'boxAttributes' => array( 'class' => 'media-item' ) )
+												) . '<!--'; ?>
 											<?php endforeach; ?>
 
 										--></div>

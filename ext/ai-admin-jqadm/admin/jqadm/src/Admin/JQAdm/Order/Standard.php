@@ -436,7 +436,7 @@ class Standard
 		$search->setConditions( $search->compare( '==', 'order.base.id', $baseIds ) );
 		$search->setSlice( 0, 0x7fffffff );
 
-		return $manager->searchItems( $search, ['order/base/address', 'order/base/service'] );
+		return $manager->searchItems( $search, ['order/base/address', 'order/base/coupon', 'order/base/service'] );
 	}
 
 
@@ -573,6 +573,16 @@ class Standard
 	{
 		$siteId = $this->getContext()->getLocale()->getSiteId();
 		$data = $item->toArray( true );
+
+		if( $item->getCustomerId() != '' )
+		{
+			$manager = \Aimeos\MShop\Factory::createManager( $this->getContext(), 'customer' );
+
+			try {
+				$data += $manager->getItem( $item->getCustomerId() )->toArray();
+			} catch( \Exception $e ) {};
+		}
+
 
 		if( $copy === true )
 		{

@@ -68,7 +68,7 @@ $cfgSuggest = $this->config( 'admin/jqadm/catalog/item/config/suggest', ['css-cl
 	<input id="item-id" type="hidden" name="<?= $enc->attr( $this->formparam( array( 'item', 'catalog.id' ) ) ); ?>"
 		value="<?= $enc->attr( $this->get( 'itemData/catalog.id' ) ); ?>" />
 	<input id="item-parentid" type="hidden" name="<?= $enc->attr( $this->formparam( array( 'item', 'catalog.parentid' ) ) ); ?>"
-		value="<?= $enc->attr( $this->get( 'itemData/catalog.parentid', $this->param( 'id', $this->get( 'itemRootId' ) ) ) ); ?>" />
+		value="<?= $enc->attr( $this->get( 'itemData/catalog.parentid', $this->param( 'parentid', $this->param( 'id', $this->get( 'itemRootId' ) ) ) ) ); ?>" />
 	<input id="item-next" type="hidden" name="<?= $enc->attr( $this->formparam( array( 'next' ) ) ); ?>" value="get" />
 	<?= $this->csrf()->formfield(); ?>
 
@@ -269,7 +269,7 @@ $cfgSuggest = $this->config( 'admin/jqadm/catalog/item/config/suggest', ['css-cl
 											</tr>
 										<?php endforeach; ?>
 
-										<tr class="prototype">
+										<tr class="config-item prototype">
 											<td>
 												<input type="text" class="config-key form-control" tabindex="1" disabled="disabled"
 													name="<?= $enc->attr( $this->formparam( array( 'item', 'config', 'key', '' ) ) ); ?>" />

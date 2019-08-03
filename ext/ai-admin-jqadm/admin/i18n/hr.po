@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aimeos-core\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-14 09:41+0200\n"
-"PO-Revision-Date: 2018-10-14 07:41+0000\n"
-"Last-Translator: Aimeos\n"
+"POT-Creation-Date: 2019-03-13 10:02+0100\n"
+"PO-Revision-Date: 2019-03-13 09:09+0000\n"
+"Last-Translator: Miro Sertić <miro.sertic0606@gmail.com>\n"
 "Language-Team: Croatian (http://www.transifex.com/aimeos/aimeos-core/language/hr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -143,7 +143,7 @@ msgid "Admin JQAdm type is empty"
 msgstr ""
 
 msgid "Advanced"
-msgstr ""
+msgstr "Napredno"
 
 #, php-format
 msgid "Aimeos object not available"
@@ -244,7 +244,7 @@ msgid "Attribute: {0} ({1})"
 msgstr ""
 
 msgid "Attributes"
-msgstr ""
+msgstr "Atributi"
 
 msgid "Available attributes"
 msgstr ""
@@ -289,7 +289,7 @@ msgid "Base ID"
 msgstr ""
 
 msgid "Basic"
-msgstr ""
+msgstr "Osnovno"
 
 msgid "Basket"
 msgstr "Košarica"
@@ -307,7 +307,7 @@ msgid "Bug or suggestion?"
 msgstr ""
 
 msgid "Bundles"
-msgstr ""
+msgstr "Paketi"
 
 msgid "Cache"
 msgstr ""
@@ -322,7 +322,7 @@ msgid "Cancel and return to list"
 msgstr ""
 
 msgid "Catalog"
-msgstr ""
+msgstr "Katalog"
 
 msgid "Catalog Lists Type"
 msgstr ""
@@ -348,7 +348,7 @@ msgid "Categories the product will be shown for in the promotional section"
 msgstr ""
 
 msgid "Category name"
-msgstr ""
+msgstr "Naziv kategorije"
 
 msgid ""
 "Category specific configuration options, will be available as key/value "
@@ -356,7 +356,7 @@ msgid ""
 msgstr ""
 
 msgid "Characteristics"
-msgstr ""
+msgstr "Karakteristike"
 
 msgid "Choose file"
 msgstr ""
@@ -405,7 +405,7 @@ msgid "Code to uniquely identify the site, renaming is dangerous!"
 msgstr ""
 
 msgid "Codes"
-msgstr ""
+msgstr "Kodovi"
 
 msgid "Columns"
 msgstr ""
@@ -442,7 +442,7 @@ msgid ""
 msgstr ""
 
 msgid "Content"
-msgstr ""
+msgstr "Sadržaj"
 
 msgid "Copy"
 msgstr "Kopiraj"
@@ -595,7 +595,7 @@ msgid "Date the subscription ends"
 msgstr ""
 
 msgid "Days"
-msgstr ""
+msgstr "Dana"
 
 msgid "Default"
 msgstr "Zadano"
@@ -647,7 +647,7 @@ msgid "Display field is empty"
 msgstr ""
 
 msgid "Domain"
-msgstr ""
+msgstr "Domena"
 
 msgid "Domain (required)"
 msgstr ""
@@ -701,7 +701,7 @@ msgid "End date (optional)"
 msgstr ""
 
 msgid "Error"
-msgstr ""
+msgstr "Greška"
 
 msgid "Excl. tax"
 msgstr ""
@@ -761,7 +761,7 @@ msgid "First name of the person if used in cultures where they are used"
 msgstr ""
 
 msgid "Firstname"
-msgstr ""
+msgstr "Ime"
 
 msgid "Floor"
 msgstr ""
@@ -788,10 +788,10 @@ msgid "Flush cache?"
 msgstr ""
 
 msgid "Full name"
-msgstr ""
+msgstr "Puno ime"
 
 msgid "Full name (required)"
-msgstr ""
+msgstr "Puno ime (obavezno)"
 
 msgid "Group"
 msgstr "Grupa"
@@ -865,7 +865,7 @@ msgid "Incl. tax"
 msgstr ""
 
 msgid "Info"
-msgstr ""
+msgstr "Info"
 
 msgid "Insert new entry"
 msgstr ""
@@ -903,7 +903,7 @@ msgid "Internal type name shown in the administration interface"
 msgstr ""
 
 msgid "Interval"
-msgstr ""
+msgstr "Interval"
 
 msgid "Interval (required)"
 msgstr ""
@@ -984,7 +984,7 @@ msgid "Language"
 msgstr "Jezik"
 
 msgid "Language (required)"
-msgstr ""
+msgstr "Jezik (obavezno)"
 
 msgid "Language ID"
 msgstr "ID jezika"
@@ -1034,13 +1034,13 @@ msgid "Length"
 msgstr ""
 
 msgid "List"
-msgstr ""
+msgstr "Lista"
 
 msgid "List ID"
-msgstr ""
+msgstr "ID liste"
 
 msgid "List Status"
-msgstr ""
+msgstr "Status liste"
 
 msgid "List creation time"
 msgstr ""
@@ -1110,10 +1110,10 @@ msgid "Locale site: {0} ({1})"
 msgstr ""
 
 msgid "Log"
-msgstr ""
+msgstr "Zapis"
 
 msgid "Logs"
-msgstr ""
+msgstr "Zapisi"
 
 msgid "Long description"
 msgstr ""
@@ -1183,7 +1183,7 @@ msgid "Modified"
 msgstr ""
 
 msgid "Months"
-msgstr ""
+msgstr "Mjeseci"
 
 msgid "More"
 msgstr "Više"
@@ -1192,10 +1192,10 @@ msgid "Move this entry up/down"
 msgstr ""
 
 msgid "Mr"
-msgstr "G."
+msgstr "Gosp."
 
 msgid "Mrs"
-msgstr "Gđa"
+msgstr "Gđja"
 
 msgid "Name"
 msgstr "Naziv"
@@ -1256,7 +1256,7 @@ msgid "Non-shared properties for the media item"
 msgstr ""
 
 msgid "None"
-msgstr ""
+msgstr "Ništa"
 
 #, php-format
 msgid "Not allowed to access JQAdm \"%1$s\" client"
@@ -1273,7 +1273,7 @@ msgid ""
 msgstr ""
 
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 msgid "Official VAT ID to determine if the tax needs to be billed in invoices"
 msgstr ""
@@ -1291,10 +1291,10 @@ msgid ""
 msgstr ""
 
 msgid "Order"
-msgstr ""
+msgstr "Narudžba"
 
 msgid "Order ID"
-msgstr ""
+msgstr "ID narudžbe"
 
 msgid "Order item details"
 msgstr ""
@@ -1419,7 +1419,7 @@ msgid "Please save the coupon first before you can add codes"
 msgstr ""
 
 msgid "Please select"
-msgstr ""
+msgstr "Odaberite"
 
 msgid ""
 "Please select an item on the right side and add it via drag and drop to this"
@@ -1458,7 +1458,7 @@ msgid "Plugins"
 msgstr "Dodaci"
 
 msgid "Position"
-msgstr ""
+msgstr "Pozicija"
 
 msgid "Position (required)"
 msgstr ""
@@ -1485,7 +1485,7 @@ msgid "Preview URL"
 msgstr ""
 
 msgid "Previous"
-msgstr ""
+msgstr "Prethodno"
 
 msgid "Price"
 msgstr "Cijena"
@@ -1522,7 +1522,7 @@ msgid "Priority"
 msgstr "Prioritet"
 
 msgid "Problem"
-msgstr ""
+msgstr "Problem"
 
 msgid "Product"
 msgstr "Proizvod"
@@ -1592,13 +1592,13 @@ msgid "Product property type: {0} ({1})"
 msgstr ""
 
 msgid "Product quantity"
-msgstr ""
+msgstr "Količina proizvoda"
 
 msgid "Product rebate"
 msgstr ""
 
 msgid "Product status"
-msgstr ""
+msgstr "Status proizvoda"
 
 msgid "Product stock"
 msgstr ""
@@ -1664,22 +1664,22 @@ msgid "Provider/decorator class names (required)"
 msgstr ""
 
 msgid "Purchase"
-msgstr ""
+msgstr "Kupnja"
 
 msgid "Purchase date"
-msgstr ""
+msgstr "Datum kupovine"
 
 msgid "Purchased"
-msgstr ""
+msgstr "Kupljeno"
 
 msgid "Quantity"
-msgstr ""
+msgstr "Količina"
 
 msgid "Quantity or empty if unlimited (optional)"
 msgstr ""
 
 msgid "Reason"
-msgstr ""
+msgstr "Razlog"
 
 msgid "Rebate"
 msgstr ""
@@ -1702,16 +1702,16 @@ msgid "Related order ID"
 msgstr ""
 
 msgid "Remove filter"
-msgstr ""
+msgstr "Ukloni filter"
 
 msgid "Renew"
-msgstr ""
+msgstr "Obnovi"
 
 msgid "Replace file"
 msgstr ""
 
 msgid "Request"
-msgstr ""
+msgstr "Zahtjev"
 
 #, php-format
 msgid "Required parameter \"%1$s\" is missing"
@@ -1723,10 +1723,10 @@ msgid ""
 msgstr ""
 
 msgid "Reset"
-msgstr ""
+msgstr "Poništi"
 
 msgid "Result"
-msgstr ""
+msgstr "Rezultat"
 
 msgid ""
 "Route name or page ID of the category page if this category should shown on "
@@ -1772,7 +1772,7 @@ msgid "Save entry (Ctrl+S)"
 msgstr ""
 
 msgid "Saving"
-msgstr ""
+msgstr "Spremanje"
 
 #, python-brace-format
 msgid "Schema {0} is  not registered"
@@ -1792,16 +1792,16 @@ msgid "Select Item"
 msgstr ""
 
 msgid "Select file"
-msgstr ""
+msgstr "Odaberite dokument"
 
 msgid "Select languages to export"
 msgstr ""
 
 msgid "Service"
-msgstr ""
+msgstr "Usluga"
 
 msgid "Service ID"
-msgstr ""
+msgstr "ID usluge"
 
 msgid "Service Lists Type"
 msgstr ""
@@ -1865,7 +1865,7 @@ msgid "Ship status"
 msgstr ""
 
 msgid "Shipping"
-msgstr ""
+msgstr "Dostava"
 
 msgid "Shipping costs per item"
 msgstr ""
@@ -1877,7 +1877,7 @@ msgid "Shipping/Payment costs"
 msgstr ""
 
 msgid "Short description"
-msgstr ""
+msgstr "Kratak opis"
 
 msgid ""
 "Short state code (e.g. NY) if used in the country the customer is living"
@@ -1893,7 +1893,7 @@ msgid ""
 msgstr ""
 
 msgid "Show"
-msgstr ""
+msgstr "Prikaži"
 
 msgid "Show entry"
 msgstr ""
@@ -1914,7 +1914,7 @@ msgid "Since when the product is available, used for sorting in the front-end"
 msgstr ""
 
 msgid "Site"
-msgstr ""
+msgstr "Stranica"
 
 msgid ""
 "Site specific configuration options, will be available as key/value pairs"
@@ -1942,7 +1942,7 @@ msgid "Source of the invoice, e.g. by web or phone"
 msgstr ""
 
 msgid "Start date"
-msgstr ""
+msgstr "Početni datum"
 
 msgid "State"
 msgstr ""
@@ -1951,25 +1951,25 @@ msgid "Status"
 msgstr "Status"
 
 msgid "Stock"
-msgstr ""
+msgstr "Zaliha"
 
 msgid "Stock Type"
-msgstr ""
+msgstr "Vrsta zalihe"
 
 msgid "Stock Types"
-msgstr ""
+msgstr "Vrste zaliha"
 
 msgid "Stock level"
-msgstr ""
+msgstr "Nivo zalihe"
 
 msgid "Stock type"
-msgstr ""
+msgstr "Vrsta zalihe"
 
 msgid "Street"
 msgstr "Ulica"
 
 msgid "Street (required)"
-msgstr ""
+msgstr "Ulica (obavezno)"
 
 msgid "Street name (optional)"
 msgstr ""
@@ -2070,7 +2070,7 @@ msgid "Text Lists Types"
 msgstr ""
 
 msgid "Text Type"
-msgstr ""
+msgstr "Vrsta teksta"
 
 msgid "Text Types"
 msgstr "Vrste teksta"
@@ -2161,13 +2161,13 @@ msgid "Two letter country code, e.g. \"US\" (required)"
 msgstr ""
 
 msgid "Type"
-msgstr ""
+msgstr "Vrsta"
 
 msgid "Type position (optional)"
 msgstr ""
 
 msgid "Types"
-msgstr ""
+msgstr "Vrste"
 
 msgid "Types for additional images like icons"
 msgstr ""
@@ -2285,7 +2285,7 @@ msgid "Variant product attributes that are stored with the ordered products"
 msgstr ""
 
 msgid "Variants"
-msgstr ""
+msgstr "Varijante"
 
 msgid "Vat ID"
 msgstr "OIB"
@@ -2303,7 +2303,7 @@ msgid "Voucher"
 msgstr ""
 
 msgid "Vouchers"
-msgstr ""
+msgstr "Bonovi"
 
 msgid "Warehouse"
 msgstr "Skladište"
@@ -2379,11 +2379,11 @@ msgstr "Adresa za račun"
 
 #, php-format
 msgid "attribute"
-msgstr ""
+msgstr "Atributi"
 
 #, php-format
 msgid "bundle"
-msgstr ""
+msgstr "Paketi"
 
 #, php-format
 msgid "catalog"
@@ -2395,22 +2395,22 @@ msgstr "Kategorije"
 
 #, php-format
 msgid "characteristic"
-msgstr ""
+msgstr "Karakteristike"
 
 #, php-format
 msgid "code"
-msgstr ""
+msgstr "Kodovi"
 
 msgid "company"
 msgstr "Poduzeće"
 
 #, php-format
 msgid "countday"
-msgstr ""
+msgstr "broj dana"
 
 #, php-format
 msgid "counthour"
-msgstr ""
+msgstr "broj sati"
 
 #, php-format
 msgid "countpaystatus"
@@ -2418,7 +2418,7 @@ msgstr ""
 
 #, php-format
 msgid "coupon"
-msgstr ""
+msgstr "Bonovi"
 
 #, php-format
 msgid "customer"
@@ -2430,11 +2430,11 @@ msgstr "Kontrolna ploča"
 
 #, php-format
 msgid "day"
-msgstr ""
+msgstr "Po danima"
 
 #, php-format
 msgid "deliverytype"
-msgstr ""
+msgstr "Po vrsti dostave"
 
 #, php-format
 msgid "download"
@@ -2442,11 +2442,11 @@ msgstr "Preuzimanje"
 
 #, php-format
 msgid "group"
-msgstr ""
+msgstr "grupa"
 
 #, php-format
 msgid "hour"
-msgstr ""
+msgstr "Po satu"
 
 #, php-format
 msgid "image"
@@ -2458,7 +2458,7 @@ msgstr "Računi"
 
 #, php-format
 msgid "latest"
-msgstr ""
+msgstr "Poslijednje"
 
 #, php-format
 msgid "locale"
@@ -2478,7 +2478,7 @@ msgstr "Stranice"
 
 #, php-format
 msgid "log"
-msgstr ""
+msgstr "zapis"
 
 msgid "media"
 msgstr "Mediji"
@@ -2552,10 +2552,10 @@ msgid "pay:pending"
 msgstr "Na čekanju"
 
 msgid "pay:received"
-msgstr ""
+msgstr "Primljeno"
 
 msgid "pay:refund"
-msgstr ""
+msgstr "Povrat novaca"
 
 msgid "pay:refused"
 msgstr "Odbijeno"
@@ -2573,7 +2573,7 @@ msgstr "Po načinima plaćanja"
 
 #, php-format
 msgid "physical"
-msgstr ""
+msgstr "Fizički"
 
 #, php-format
 msgid "plugin"
@@ -2592,13 +2592,13 @@ msgid "property"
 msgstr ""
 
 msgid "reason:-1"
-msgstr ""
+msgstr "razlog:-1"
 
 msgid "reason:0"
-msgstr ""
+msgstr "razlog:0"
 
 msgid "reason:1"
-msgstr ""
+msgstr "razlog:1"
 
 #, php-format
 msgid "related"
@@ -2610,7 +2610,7 @@ msgstr ""
 
 #, php-format
 msgid "selection"
-msgstr ""
+msgstr "Varijante"
 
 #, php-format
 msgid "service"
@@ -2733,11 +2733,11 @@ msgstr "Tekstovi"
 
 #, php-format
 msgid "type"
-msgstr ""
+msgstr "vrsta"
 
 #, php-format
 msgid "type/attribute"
-msgstr ""
+msgstr "Atributi"
 
 #, php-format
 msgid "type/attribute/lists"
@@ -2817,7 +2817,7 @@ msgstr "Tekstovi"
 
 #, php-format
 msgid "type/text/lists"
-msgstr ""
+msgstr "Lista tekstova"
 
 msgid "unknown"
 msgstr "Nepoznato"
