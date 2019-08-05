@@ -7,12 +7,13 @@ cd /data/PHP/Laravel5/starter/LaravelStarter56
 nautilus .
 
 ### Laravel58
-#### 软件包 2 vue scss
-http://laravel58.beesoft.org/package
-#### 字体 0
-http://laravel58.beesoft.org/font
-#### svg 0
-http://laravel58.beesoft.org/svg
+#### 工具 2 vue scss
+http://laravel58.beesoft.org/tool/applications
+http://laravel58.beesoft.org/tool/packages
+http://laravel58.beesoft.org/tool/files
+http://laravel58.beesoft.org/tool/fonts
+http://laravel58.beesoft.org/tool/custom_fonts
+http://laravel58.beesoft.org/tool/svgs
 日志 1
 配置 1
 音乐 1
@@ -49,3 +50,11 @@ http://laravel56.beesoft.org/api/votes
 
 ### note
 
+### warehouse
+#### 用户配置
+默认
+	布局
+	布局细节
+	风格
+	风格细节
+	语言

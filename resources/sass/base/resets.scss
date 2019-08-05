@@ -2,6 +2,11 @@
 body {
     margin: 0; // chrome margin: 8px;
 }
+menu {
+	margin-block-start: 0; // chrome margin-block-start: 1em;
+    margin-block-end: 0; // chrome margin-block-end: 1em;
+    padding-inline-start: 0; // chrome padding-inline-start: 40px;
+}
 ul {
     margin-block-start: 0; // chrome margin-block-start: 1em;
     margin-block-end: 0; // chrome margin-block-end: 1em;
@@ -12,7 +17,14 @@ a {
     text-decoration: none;
     color: unset;
 }
+i {
+    font-style: normal;
+}
 input, button, select, textarea {
     padding: 0;
     outline: unset;
+}
+table {
+    -webkit-border-horizontal-spacing: 1px; // chrome -webkit-border-horizontal-spacing: 2px;
+    -webkit-border-vertical-spacing: 2px; // chrome -webkit-border-vertical-spacing: 2px;
 }
