@@ -3,6 +3,8 @@ namespace App\Http\Requests\Tool;
 
 use Illuminate\Foundation\Http\FormRequest;
 
+use Illuminate\Validation\Rule;
+
 class ApplicationRequest extends FormRequest {
     public function authorize() {
         return true;
