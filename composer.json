@@ -48,6 +48,8 @@
         "start-point/etcd-php": "^1.1",
         "swoole/etcd-client": "^1.0",
         "symfony/workflow": "^4.3",
+        "overtrue/laravel-ueditor": "~1.2",
+        "laravelchen/laravel-editormd": "~2.5",
         "vinkla/hashids": "^6.0"
     },
     "require-dev": {

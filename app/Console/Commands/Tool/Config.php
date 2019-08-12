@@ -5,7 +5,7 @@ use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 
-use App\Models\Config\Configure as ThisModel;
+use App\Models\Config\ConfigureTemplate as ThisModel;
 
 class Config extends Command {
     protected $signature = 'tool:config';
