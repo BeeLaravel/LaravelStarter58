@@ -1,6 +1,6 @@
 <?php
 namespace App\Soap\Request\Weather;
 
-class getRegionProvince {
+class getRegionCountry {
 	public function __construct() {}
 }
