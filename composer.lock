@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e62d31a250a3693acdc189fab16700c8",
+    "content-hash": "d525c3d9244bc39640adfdf8d1536382",
     "packages": [
         {
             "name": "abraham/twitteroauth",
@@ -5041,6 +5041,44 @@
             ],
             "description": "UEditor integration for Laravel.",
             "time": "2018-12-22T07:40:09+00:00"
+        },
+        {
+            "name": "ows/commonmark-sup-sub-extensions",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/OWS/commonmark-sup-sub-extensions.git",
+                "reference": "bcc9b64d59390063658e64e00cd102fe888dbedb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/OWS/commonmark-sup-sub-extensions/zipball/bcc9b64d59390063658e64e00cd102fe888dbedb",
+                "reference": "bcc9b64d59390063658e64e00cd102fe888dbedb",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mbstring": "*",
+                "league/commonmark": "^0.17|^0.18|^1.0",
+                "php": ">=5.6.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ows\\CommonMark\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "A sup/sub extension for CommonMark PHP implementation",
+            "homepage": "https://github.com/ows/commonmark-sup-sub-extensions",
+            "keywords": [
+                "commonmark",
+                "markdown",
+                "parser"
+            ],
+            "time": "2018-12-07T15:18:31+00:00"
         },
         {
             "name": "paragonie/random_compat",

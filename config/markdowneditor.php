@@ -1,5 +1,5 @@
 <?php
-return [
+return [ // chenhua/laravel5-markdown-editor editormd
     "default" => 'local', // 默认返回存储位置 url
     "dirver" => ['local'], // 存储平台 ['local', 'qiniu', 'aliyun']
     "connections" => [ // 连接

@@ -22,14 +22,10 @@ Route::group([], function ($router) {
 
 		Route::get('/fontlib', 'Parser\FontLibController@index')->name('parser.fontlib'); // PhenX/php-font-lib
 		Route::get('/pdfparser', 'Parser\PdfparserController@index')->name('parser.pdfparser'); // smalot/pdfparser
-		Route::get('/markdown', 'Parser\MarkdownController@index')->name('parser.markdown'); // graham-campbell/markdown
-		Route::get('/markdown2', 'Parser\MarkdownController@index2')->name('parser.markdown2');
-		Route::get('/markdown3', 'Parser\MarkdownController@index3')->name('parser.markdown3');
-		Route::get('/markdown4', 'Parser\MarkdownController@index4')->name('parser.markdown4');
 		Route::get('/hashids', 'Parser\HashidsController@index')->name('parser.hashids');
         Route::get('/barcode', 'BarCodeController@index')->name('parser.barcode');;
 	});
-	// ### 迁移
+	// ### RPC
 	Route::group([
 		'prefix' => 'rpc',
 	], function ($router) {
@@ -37,6 +33,7 @@ Route::group([], function ($router) {
 		Route::get('activecollab-etcd', 'Rpc\ActivecollabEtcdController@index')->name('activecollab-etc.index');
 	});
 
+	// ### 语言
 	Route::group([
 		'prefix' => LaravelLocalization::setLocale(), // mcamara/laravel-localization
 	], function() {

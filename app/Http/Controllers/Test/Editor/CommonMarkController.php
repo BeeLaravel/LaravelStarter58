@@ -1,5 +1,5 @@
 <?php
-namespace App\Http\Controllers\Package\Parser;
+namespace App\Http\Controllers\Test\Editor;
 
 use League\CommonMark\CommonMarkConverter;
 
@@ -32,6 +32,7 @@ class CommonMarkController extends Controller {
         $converter = new CommonMarkConverter($config, $environment);
         echo $converter->convertToHtml('# Hello World!');
     }
+
     public function autolink() {
         $environment = Environment::createCommonMarkEnvironment();
         $environment->addExtension(new AutolinkExtension());
@@ -76,6 +77,7 @@ class CommonMarkController extends Controller {
             [*Prototype* table][reference_table]'
         );
     }
+
     public function attributes() {
         $environment = Environment::createCommonMarkEnvironment();
         $environment->addExtension(new AttributesExtension());
