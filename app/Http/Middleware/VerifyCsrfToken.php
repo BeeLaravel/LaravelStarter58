@@ -21,5 +21,7 @@ class VerifyCsrfToken extends Middleware
     protected $except = [
         '/tool/database/browser/server',
         '/tool/database/browser/table',
+
+        '/markdown/editormd/upload', // chenhua/laravel5-markdown-editor 文件上传
     ];
 }

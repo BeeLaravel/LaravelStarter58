@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-return [
+return [ // graham-campbell/markdown GrahamCampbell/Laravel-Markdown
     'views' => true, // Default: true 渲染 markdown 视图 后缀 .md .md.php .md.blade.php Blade @markdown
     'extensions' => [
         // AltThree\Emoji\EmojiExtension::class, // 暂不支持 laravel 5.8

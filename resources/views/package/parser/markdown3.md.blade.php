@@ -1,5 +1,0 @@
-# test markdown
-
-:smiley:
-
-:blush:
