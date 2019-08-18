@@ -24,3 +24,6 @@ Route::get('editor/markdown43', 'Editor\MarkdownController@markdown43')->name('t
 Route::get('editor/commonmark1', 'Editor\CommonMarkController@index')->name('test.editor.commonmark1');
 Route::get('editor/commonmark2', 'Editor\CommonMarkController@extras')->name('test.editor.commonmark2');
 Route::get('editor/commonmark/subsup', 'Editor\CommonMarkController@subsup')->name('test.editor.commonmark.subsup'); // ok
+
+Route::get('editor/ueditor', 'Editor\EditorController@ueditor')->name('test.editor.ueditor');
+// Route::get('editor/ueditor', 'Editor\EditorController@ueditor')->name('test.editor.ueditor');

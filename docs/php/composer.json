@@ -1,0 +1,17 @@
+{
+	"require": {
+        "monolog/monolog": "1.0.* @dev"
+    },
+    "require-dev": {
+        "xxxx/xxxx": "x.x.* @dev"
+    },
+    "autoload": {
+	    "files": ["lib/ClassTest.php"],
+	    "psr-0": {
+	        "ClassTestLib": "lib/",
+	        "ClassTest\\Lib": "lib/"
+    	}
+	},
+    "classmap" : ["lib"],
+
+}
