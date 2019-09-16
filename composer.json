@@ -78,6 +78,7 @@
         "ows/commonmark-sup-sub-extensions": "^1.1",
         "phenx/php-font-lib": "^0.5.1",
         "protoqol/prequel": "^1.13",
+        "pusher/pusher-php-server": "^4.0",
         "qoraiche/laravel-mail-editor": "^1.1",
         "scriptotek/marc": "^2.0",
         "simplesoftwareio/simple-qrcode": "^2.0",
