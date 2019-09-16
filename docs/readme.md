@@ -7,6 +7,11 @@ cd /data/PHP/Laravel5/starter/LaravelStarter56
 nautilus .
 
 ### Laravel58
+
+#### 系统工具
+http://laravel58.beesoft.org/telescope # 调式后台
+http://laravel58.beesoft.org/prequel # 数据库
+
 #### 工具 2 vue scss
 http://laravel58.beesoft.org/tool/applications
 http://laravel58.beesoft.org/tool/packages

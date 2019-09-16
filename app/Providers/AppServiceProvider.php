@@ -1,30 +1,32 @@
 <?php
-
 namespace App\Providers;
 
-use Illuminate\Support\ServiceProvider;
+class AppServiceProvider extends \Illuminate\Support\ServiceProvider {
+    public function register() {
+        \Illuminate\Support\Facades\Schema::defaultStringLength(191); // 兼容老版本 MySQL
 
-class AppServiceProvider extends ServiceProvider
-{
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        if (config('app.debug')) {
-            $this->app->register('VIACreative\SudoSu\ServiceProvider');
-        }
+        if ( config('app.debug') ) $this->app->register('VIACreative\SudoSu\ServiceProvider');
     }
+    public function boot() {
+    	// \Carbon\Carbon::setLocale('zh');
 
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-        //
+        $table = config('admin.extensions.config.table', 'admin_config'); // laravel-admin-ext/config
+        if ( \Illuminate\Support\Facades\Schema::hasTable($table) ) \Encore\Admin\Config\Config::load();
+
+        \Illuminate\Support\Facades\Queue::before(function (JobProcessing $event) {
+            // $event->connectionName
+            // $event->job
+            // $event->job->payload()
+        });
+        \Illuminate\Support\Facades\Queue::after(function (JobProcessed $event) {
+            // $event->connectionName
+            // $event->job
+            // $event->job->payload()
+        });
+        \Illuminate\Support\Facades\Queue::failing(function (JobFailed $event) {
+            // $event->connectionName
+            // $event->job
+            // $event->exception
+        });
     }
 }

@@ -21,7 +21,7 @@ class CreateConfiguresTable extends Migration
             $table->unsignedInteger('company_id')->default(0)->comment('公司 ID');
 
             $table->unsignedTinyInteger('sort')->default(255);
-            $table->integer('created_by')->default(0);
+            $table->unsignedInteger('created_by')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });

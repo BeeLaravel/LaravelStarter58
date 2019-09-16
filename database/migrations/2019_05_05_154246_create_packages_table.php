@@ -13,7 +13,7 @@ class CreatePackagesTable extends Migration
      */
     public function up()
     {
-        Schema::create('packages', function (Blueprint $table) {
+        Schema::create('resource_packages', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title')->comment('标题');
             $table->string('slug')->comment('标识');
@@ -23,7 +23,7 @@ class CreatePackagesTable extends Migration
             $table->text('note')->nullable()->comment('笔记');
 
             $table->unsignedTinyInteger('sort')->default(255);
-            $table->integer('created_by')->default(0);
+            $table->unsignedInteger('created_by')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });
@@ -36,6 +36,6 @@ class CreatePackagesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('packages');
+        Schema::dropIfExists('resource_packages');
     }
 }

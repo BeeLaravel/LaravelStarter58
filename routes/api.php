@@ -38,7 +38,7 @@ $api = app('Dingo\Api\Routing\Router');
 
 		$api->group([ // 结构 Structure
 	    	'prefix' => 'structure',
-	  ], function ($api) {
+	    ], function ($api) {
 			$api->get('category_items/{parent_id}', '\App\Http\Controllers\Api\Structure\CategoryItemController@index');
 	    	$api->resource('category_items', '\App\Http\Controllers\Api\Structure\CategoryItemController'); // 分类 项
 		});

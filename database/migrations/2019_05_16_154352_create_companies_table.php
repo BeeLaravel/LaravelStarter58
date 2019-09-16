@@ -21,7 +21,7 @@ class CreateCompaniesTable extends Migration
             $table->text('extra_attributes')->nullable()->comment('额外信息');
 
             $table->unsignedTinyInteger('sort')->default(255);
-            $table->integer('created_by')->default(0);
+            $table->unsignedInteger('created_by')->default(0);
             $table->timestamps();
             $table->softDeletes();
 

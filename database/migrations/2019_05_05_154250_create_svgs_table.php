@@ -13,14 +13,14 @@ class CreateSvgsTable extends Migration
      */
     public function up()
     {
-        Schema::create('svgs', function (Blueprint $table) {
+        Schema::create('resource_svgs', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title')->comment('标题');
             $table->string('url')->comment('URL');
             $table->unsignedInteger('category_id')->comment('分类');
 
             $table->unsignedTinyInteger('sort')->default(255);
-            $table->integer('created_by')->default(0);
+            $table->unsignedInteger('created_by')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });
@@ -33,6 +33,6 @@ class CreateSvgsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('svgs');
+        Schema::dropIfExists('resource_svgs');
     }
 }

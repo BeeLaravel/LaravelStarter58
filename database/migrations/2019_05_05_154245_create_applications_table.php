@@ -13,7 +13,7 @@ class CreateApplicationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('applications', function (Blueprint $table) {
+        Schema::create('resource_applications', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title')->comment('标题');
             $table->string('slug')->comment('标识');
@@ -36,6 +36,6 @@ class CreateApplicationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('applications');
+        Schema::dropIfExists('resource_applications');
     }
 }

@@ -16,6 +16,8 @@
         "awssat/laravel-visits": "^1.5",
         "barryvdh/laravel-cors": "^0.11.3",
         "barryvdh/laravel-snappy": "^0.4.4",
+        "beesoft/laravel-utils": "dev-master",
+        "beesoft/warehouse": "dev-master",
         "beesoft/weather": "dev-master",
         "binarytorch/larecipe": "^2.0",
         "botman/botman": "~2.4",
@@ -26,11 +28,42 @@
         "chenhua/laravel5-markdown-editor": "^1.0",
         "chumper/zipper": "^1.0",
         "cmgmyr/messenger": "^2.17",
+        "codingyu/ueditor": "^2.0",
+        "denpa/laravel-zeromq": "~1.0",
+        "dianwoung/large-file-upload": "^0.0.3",
         "dingo/api": "^2.2",
+        "encore/laravel-admin": "^1.7",
         "fideloper/proxy": "^4.0",
+        "glorand/laravel-model-settings": "^3.2",
         "graham-campbell/markdown": "^10.3",
         "jenssegers/agent": "^2.6",
+        "jxlwqq/code-mirror": "^1.0",
+        "jxlwqq/composer-viewer": "^1.0",
+        "jxlwqq/echarts": "^1.0",
+        "jxlwqq/env-manager": "^0.1.0",
+        "jxlwqq/file-manager": "^1.0",
+        "jxlwqq/json-editor": "^1.0",
+        "jxlwqq/simditor": "^1.0",
+        "jxlwqq/tencent-map": "^1.1",
+        "laravel-admin-ext/api-tester": "^1.0",
+        "laravel-admin-ext/backup": "^1.0",
+        "laravel-admin-ext/config": "^1.0",
+        "laravel-admin-ext/css-editor": "^1.0",
+        "laravel-admin-ext/helpers": "^1.1",
+        "laravel-admin-ext/js-editor": "^1.0",
+        "laravel-admin-ext/latlong": "^1.2",
+        "laravel-admin-ext/log-viewer": "^1.0",
+        "laravel-admin-ext/media-manager": "^1.0",
+        "laravel-admin-ext/php-editor": "^1.0",
+        "laravel-admin-ext/phpinfo": "^1.0",
+        "laravel-admin-ext/python-editor": "^1.0",
+        "laravel-admin-ext/redis-manager": "^1.1",
+        "laravel-admin-ext/reporter": "^1.0",
+        "laravel-admin-ext/scheduling": "^1.0",
+        "laravel-admin-ext/wang-editor": "^1.1",
+        "laravel-admin-extensions/multi-language": "^0.0.3",
         "laravel/framework": "5.8.*",
+        "laravel/horizon": "^3.3",
         "laravel/tinker": "^1.0",
         "laravelchen/laravel-editormd": "~2.5",
         "laravolt/avatar": "^2.2",
@@ -40,32 +73,38 @@
         "lubusin/laravel-decomposer": "^1.2",
         "maatwebsite/excel": "^3.1",
         "mcamara/laravel-localization": "^1.3",
+        "nabao/laravel-lock": "^1.0",
         "overtrue/laravel-ueditor": "~1.0",
         "ows/commonmark-sup-sub-extensions": "^1.1",
         "phenx/php-font-lib": "^0.5.1",
+        "protoqol/prequel": "^1.13",
         "qoraiche/laravel-mail-editor": "^1.1",
         "scriptotek/marc": "^2.0",
         "simplesoftwareio/simple-qrcode": "^2.0",
         "smalot/pdfparser": "^0.14.0",
         "spatie/laravel-flash": "^1.2",
         "spatie/laravel-schemaless-attributes": "^1.4",
+        "spatie/opening-hours": "^2.6",
         "spatie/valuestore": "^1.2",
         "start-point/etcd-php": "^1.1",
         "swoole/etcd-client": "^1.0",
         "symfony/workflow": "^4.3",
         "tecnickcom/tcpdf": "~6.2",
         "vinkla/hashids": "^6.0",
+        "vladimir-yuldashev/laravel-queue-rabbitmq": "~8.0",
+        "xiewenfeng/lodpod-editor": "^0.0.1",
         "yuanchao/laravel-5-markdown-editor": "dev-master"
     },
     "require-dev": {
-        "laravel/telescope": "^2.0",
         "barryvdh/laravel-translation-manager": "^0.5.3",
         "beyondcode/laravel-dump-server": "^1.0",
         "beyondcode/laravel-er-diagram-generator": "^1.2",
+        "brainmaestro/composer-git-hooks": "^2.7",
         "filp/whoops": "^2.0",
         "fzaninotto/faker": "^1.4",
         "itsgoingd/clockwork": "^3.1",
         "jormin/laravel-ddoc": "^1.1",
+        "laravel/telescope": "^2.0",
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^3.0",
         "orangehill/iseed": "^2.6",
@@ -82,6 +121,18 @@
     "extra": {
         "laravel": {
             "dont-discover": []
+        },
+        "hooks": {
+            "pre-commit": [
+                "echo committing as $(git config user.name)",
+                "php-cs-fixer fix ."
+            ],
+            "commit-msg": "grep -q '[A-Z]+-[0-9]+.*' $1",
+            "pre-push": [
+                "php-cs-fixer fix --dry-run .",
+                "phpunit"
+            ],
+            "post-merge": "composer install"
         }
     },
     "autoload": {
@@ -104,6 +155,23 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
+        "cghooks": "vendor/bin/cghooks",
+        "carbon": "vendor/bin/carbon",
+        "etcd-php": "vendor/bin/etcd-php",
+        "doctrine-dbal": "vendor/bin/doctrine-dbal",
+        "package-builder": "vendor/bin/package-builder",
+        "psysh": "vendor/bin/psysh",
+        "wkhtmltoimage": "vendor/bin/wkhtmltoimage.exe",
+        "wkhtmltopdf": "vendor/bin/wkhtmltopdf.exe",
+        "php-parse": "vendor/bin/php-parse",
+        "phpunit": "vendor/bin/phpunit",
+        "var-dump-server": "vendor/bin/var-dump-server",
+        "commonmark": "vendor/bin/commonmark",
+        "html-to-markdown": "vendor/bin/html-to-markdown",
+        
+        "post-install-cmd": "vendor/bin/cghooks add --ignore-lock",
+        "post-update-cmd": "vendor/bin/cghooks update",
+
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover --ansi"
@@ -119,6 +187,14 @@
         "weather": {
             "type": "path",
             "url": "../weather"
+        },
+        "laravel-utils": {
+            "type": "path",
+            "url": "../laravel-utils"
+        },
+        "warehouse": {
+            "type": "path",
+            "url": "../warehouse"
         }
     }
 }

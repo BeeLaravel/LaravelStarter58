@@ -54,6 +54,13 @@ mount -t nfs 192.168.91.144:/data /data # 客户端挂载
 mount -o nosuid noexec noatime -t nfs 192.168.91.144:/data /data
 /etc/rc.local # 不要写在 /etc/fstab 该文件启动加载 rpcbind 未启动 导致引导失败 服务关闭也会导致失败
 	mount -t nfs 192.168.91.144:/data /data
+	mount -t nfs 192.168.91.144:/soft /soft
+	mount -t nfs 192.168.91.144:/program /program
+	ubuntu(root)
+	mount.nfs 192.168.91.144:/data /data
+	mount.nfs 192.168.91.144:/soft /soft
+	mount.nfs 192.168.91.144:/program /program
+	$PATH=.:/program
 umount -lf /data # 强制卸载
 cat /proc/mounts # 查看挂载
 

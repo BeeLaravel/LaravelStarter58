@@ -13,14 +13,14 @@ class CreateCustomFontsTable extends Migration
      */
     public function up()
     {
-        Schema::create('custom_fonts', function (Blueprint $table) {
+        Schema::create('resource_custom_fonts', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title')->comment('标题');
             $table->text('content')->comment('内容');
             $table->unsignedInteger('font_id')->comment('字体');
 
             $table->unsignedTinyInteger('sort')->default(255);
-            $table->integer('created_by')->default(0);
+            $table->unsignedInteger('created_by')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });
@@ -33,6 +33,6 @@ class CreateCustomFontsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('custom_fonts');
+        Schema::dropIfExists('resource_custom_fonts');
     }
 }

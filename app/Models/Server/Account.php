@@ -1,19 +1,23 @@
 <?php
-
 namespace App\Models\Server;
 
 use Illuminate\Database\Eloquent\Model;
 
 use Lorisleiva\LaravelSearchString\Concerns\SearchString;
+use Glorand\Model\Settings\Traits\HasSettingsTable; // 模型设置
+use Glorand\Model\Settings\Traits\HasSettingsField;
 
-class Account extends Model
-{
+class Account extends Model {
     use SearchString;
+    use HasSettingsTable;
+    use HasSettingsField;
 
     protected $table = 'server_accounts';
-
     protected $fillable = ['type', 'unique_slug', 'key', 'value', 'created_at', 'updated_at', 'created_by'];
 
+    protected $persistSettings = true; // 持久化
+    public $settingsFieldName = 'settings'; // 模型设置
+    
     protected $searchStringColumns = [
         // 'title',
         // 'body' => 'content',
@@ -45,4 +49,40 @@ class Account extends Model
         ];
     }
 }
+// php artisan model-settings:model-settings-field # 指定模型设置字段
+// php artisan migrate # 迁移
+// ### 模型设置 .env
+// MODEL_SETTINGS_FIELD_NAME=settings
+// MODEL_SETTINGS_TABLE_NAME=model_settings
+// MODEL_SETTINGS_PERSISTENT=true # 持久化
 
+// $user->settings()->all();
+// $user->settings()->get();
+
+// $user->settings()->get('some.setting');
+// $user->settings()->get('some.setting', 'default value');
+
+// $user->settings()->getMultiple([
+//     'some.setting_1',
+//     'some.setting_2',
+// ], 'default value');
+
+// $user->settings()->apply((array)$settings); // Add / Update setting
+// $user->settings()->set('some.setting', 'new value');
+// $user->settings()->update('some.setting', 'new value');
+
+// $user->settings()->setMultiple([
+//     'some.setting_1' => 'new value 1',
+//     'some.setting_2' => 'new value 2',
+// ]);
+
+// $user->settings()->has('some.setting');
+
+// $user->settings()->delete('some.setting');
+
+// $user->settings()->deleteMultiple([
+//     'some.setting_1',
+//     'some.setting_2',
+// ]);
+
+// $user->settings()->clear();

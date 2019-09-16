@@ -9,6 +9,7 @@ Route::get('symfony/workflow', 'Symfony\WorkflowController@index')->name('test.s
 
 // ### 资源
 Route::get('resource/lattice', 'Resource\LatticeController@index')->name('test.resource.lattice'); // jc91715/lattice 点阵图
+Route::get('resource/opening', 'Resource\TimeController@opening')->name('test.resource.opening'); // spatie/opening-hours 营业时间
 
 // ### 编辑器
 Route::get('editor/markdown1', 'Editor\MarkdownController@markdown1')->name('test.editor.markdown1'); // chenhua/laravel5-markdown-editor
@@ -27,3 +28,22 @@ Route::get('editor/commonmark/subsup', 'Editor\CommonMarkController@subsup')->na
 
 Route::get('editor/ueditor', 'Editor\EditorController@ueditor')->name('test.editor.ueditor');
 // Route::get('editor/ueditor', 'Editor\EditorController@ueditor')->name('test.editor.ueditor');
+
+Route::get('opening-hours', function() {
+    $openingHours = \Spatie\OpeningHours\OpeningHours::create([
+        'monday'     => ['09:00-12:00', '13:00-18:00'],
+        'tuesday'    => ['09:00-12:00', '13:00-18:00']
+    ]);
+});
+
+// ### BeeSoft
+Route::get('weather1/{city}/{type?}', 'Beesoft\WeatherController@city1'); // beesoft/weather
+Route::get('weather2/{city}/{type?}', 'Beesoft\WeatherController@city2');
+
+// ### 基础概念
+Route::get('php/variable/assign-memory', 'PHP\VariableController@assignMemory'); // asignMemory
+Route::get('php/variable/ref-memory', 'PHP\VariableController@refMemory'); // refMemory
+Route::get('php/variable/assign-detail', 'PHP\VariableController@assignDetail'); // asignDetail
+Route::get('php/variable/ref-detail', 'PHP\VariableController@refDetail'); // refDetail
+Route::get('php/variable/test', 'PHP\VariableController@test'); // test
+Route::get('php/variable/cast', 'PHP\VariableController@cast'); // cast

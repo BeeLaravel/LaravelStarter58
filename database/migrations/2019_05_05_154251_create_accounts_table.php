@@ -26,7 +26,7 @@ class CreateAccountsTable extends Migration
             $table->unsignedInteger('type_id')->comment('类型');
 
             $table->unsignedTinyInteger('sort')->default(255);
-            $table->integer('created_by')->default(0);
+            $table->unsignedInteger('created_by')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });
